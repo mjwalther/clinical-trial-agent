@@ -1,0 +1,12 @@
+[
+  "patient_has_undergone_acupuncture_inthehistory",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_has_suspicion_of_dyspnea_now",
+  "patient_has_finding_of_obesity_now",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_has_finding_of_deformity_of_chest_wall_now",
+  "patient_has_diagnosis_of_myoneural_disorder_now",
+  "patient_has_finding_of_anemia_now",
+  "patient_has_finding_of_uncontrolled_pain_now",
+  "patient_has_finding_of_heart_valve_disorder_now"
+]

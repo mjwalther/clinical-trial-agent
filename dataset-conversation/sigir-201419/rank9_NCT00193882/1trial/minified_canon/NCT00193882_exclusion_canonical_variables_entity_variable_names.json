@@ -1,0 +1,14 @@
+[
+  "patient_has_undergone_brachytherapy_inthehistory",
+  "patient_has_undergone_megavoltage_radiation_therapy_inthehistory",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_tracheoesophageal_fistula_now",
+  "patient_has_undergone_chemotherapy_inthehistory",
+  "patient_has_undergone_ct_of_abdomen_inthehistory",
+  "patient_has_undergone_ct_of_chest_inthehistory",
+  "patient_has_undergone_blood_chemistry_inthehistory",
+  "patient_has_undergone_complete_blood_count_inthehistory",
+  "patient_has_undergone_measurement_of_renal_clearance_of_creatinine_inthehistory"
+]

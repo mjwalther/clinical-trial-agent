@@ -1,0 +1,29 @@
+{
+  "patient_id": "sigir-20142",
+  "rank_folder": "rank5_NCT00314548",
+  "trial_info": {
+    "trial_id": "NCT00314548",
+    "title": "Inhaled Prostacyclin for Adult Respiratory Distress Syndrome (ARDS) and Pulmonary Hypertension",
+    "brief_summary": "Summary of the proposed research:~The intravenous application of prostacyclin (PGE1) or its stable analogue, iloprost, has been used to cause a decrease not only of the pulmonary but also of the systemic vascular tone. Aerosolized prostacyclin, on the other hand, can result in a selective pulmonary vasodilatation without affecting the systemic blood pressure as shown in preliminary studies/case reports. No large trials exist for this type of use of the drug so far. Furthermore, aerosolized PGI2 can improve gas exchange and pulmonary shunt in clinical settings of impaired ventilation/perfusion ratio as it occurs in adult respiratory distress syndrome (ARDS) due to the redistribution of pulmonary blood flow from non-ventilated to ventilated, aerosol accessible lung regions. Therefore, the investigators propose to carry out a prospective, double blinded, randomized trial to show that the nebulized iloprost decreases pulmonary hypertension selectively and improves oxygenation in ARDS.",
+    "phase": "",
+    "drugs": [
+      "PGE1 (prostacyclin)",
+      "normal saline"
+    ],
+    "diseases": [
+      "Adult Respiratory Distress Syndrome",
+      "Pulmonary Hypertension"
+    ],
+    "enrollment": "67.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_finding_of_acute_respiratory_distress_syndrome_now",
+    "patient_has_finding_of_heart_failure_now",
+    "patient_has_finding_of_hypoxemia_now",
+    "patient_inspired_oxygen_concentration_value_recorded_now_withunit_fraction",
+    "patient_oxygen_measurement_partial_pressure_arterial_value_recorded_now_withunit_millimeters_of_mercury",
+    "patient_has_undergone_plain_chest_x_ray_now",
+    "patient_pulmonary_artery_wedge_pressure_value_recorded_now_withunit_millimeters_of_mercury"
+  ],
+  "exclusion_criteria": []
+}

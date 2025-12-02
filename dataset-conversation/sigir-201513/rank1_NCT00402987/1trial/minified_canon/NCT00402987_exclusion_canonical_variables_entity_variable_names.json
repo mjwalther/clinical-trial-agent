@@ -1,0 +1,7 @@
+[
+  "patient_is_exposed_to_analgesic_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_inthehistory",
+  "patient_is_taking_albuterol_containing_product_now",
+  "patient_is_taking_beta_adrenergic_receptor_agonist_containing_product_now",
+  "patient_has_undergone_inhaled_drug_administration_inthehistory"
+]

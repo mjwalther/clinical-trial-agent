@@ -1,0 +1,10 @@
+[
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_has_diagnosis_of_chronic_systolic_heart_failure_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_has_diagnosis_of_aortic_valve_stenosis_now",
+  "patient_has_finding_of_left_main_coronary_artery_disease_now",
+  "patient_will_undergo_coronary_artery_bypass_graft_now",
+  "patient_has_diagnosis_of_chronic_atrial_fibrillation_now",
+  "patient_has_finding_of_impaired_exercise_tolerance_now"
+]

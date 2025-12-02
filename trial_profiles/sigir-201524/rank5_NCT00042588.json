@@ -1,0 +1,26 @@
+{
+  "patient_id": "sigir-201524",
+  "rank_folder": "rank5_NCT00042588",
+  "trial_info": {
+    "trial_id": "NCT00042588",
+    "title": "A Safety and Efficacy Study of Hospitalized Patients With Community-Acquired Pneumonia and Sepsis",
+    "brief_summary": "The objective of this study is to demonstrate the safety and efficacy of IC14 in the treatment of hospitalized patients with community-acquired pneumonia and sepsis.",
+    "phase": "Phase 2",
+    "drugs": [
+      "Recombinant Chimeric Monoclonal Antibody"
+    ],
+    "diseases": [
+      "Pneumonia",
+      "Sepsis"
+    ],
+    "enrollment": ""
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_community_acquired_pneumonia_now",
+    "patient_has_finding_of_disorder_due_to_infection_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_atypical_pneumonia_now",
+    "patient_has_finding_of_viral_pneumonia_now"
+  ]
+}

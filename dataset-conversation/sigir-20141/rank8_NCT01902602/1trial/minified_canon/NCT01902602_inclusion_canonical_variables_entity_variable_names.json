@@ -1,0 +1,10 @@
+[
+  "patient_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_blood_pressure_value_recorded_inthepast3weeks_withunit_mm_hg",
+  "patient_blood_pressure_value_recorded_inthehistory_withunit_mm_hg",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now"
+]

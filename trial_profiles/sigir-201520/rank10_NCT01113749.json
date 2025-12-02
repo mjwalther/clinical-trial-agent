@@ -1,0 +1,28 @@
+{
+  "patient_id": "sigir-201520",
+  "rank_folder": "rank10_NCT01113749",
+  "trial_info": {
+    "trial_id": "NCT01113749",
+    "title": "Improving Decision Making About Feeding Options for Dementia",
+    "brief_summary": "This study is a randomized trial to test whether a decision aid can help to improve the quality of decision making about feeding options in care of patients with dementia.",
+    "phase": "",
+    "drugs": [
+      "Feeding Options in Dementia Decision Aid"
+    ],
+    "diseases": [
+      "Dementia"
+    ],
+    "enrollment": "256.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_dementia_now",
+    "patient_has_finding_of_impaired_cognition_now",
+    "patient_has_finding_of_feeding_problem_now",
+    "patient_age_value_recorded_now_in_years"
+  ],
+  "exclusion_criteria": [
+    "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+    "patient_has_finding_of_developmental_delay_now",
+    "patient_has_finding_of_psychotic_disorder_now"
+  ]
+}

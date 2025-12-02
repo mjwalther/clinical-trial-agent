@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_feeling_agitated_now",
+  "patient_has_finding_of_sleep_disorder_now",
+  "patient_is_exposed_to_hypnotic_agent_inthehistory",
+  "patient_is_exposed_to_hypnotic_agent_now",
+  "patient_has_finding_of_finding_relating_to_alcohol_drinking_behavior_now",
+  "patient_has_finding_of_anaphylaxis_inthehistory",
+  "patient_has_finding_of_angioedema_inthehistory"
+]

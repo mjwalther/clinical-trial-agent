@@ -1,0 +1,24 @@
+{
+  "patient_id": "sigir-20148",
+  "rank_folder": "rank7_NCT00391833",
+  "trial_info": {
+    "trial_id": "NCT00391833",
+    "title": "Effect of Panax Ginseng on the Cognitive Performance in Alzheimer's Disease",
+    "brief_summary": "We investigate the clinical efficacy of Panax ginseng in Alzheimer's disease (AD).",
+    "phase": "Phase 1; Phase 2",
+    "drugs": [
+      "Panax Ginseng"
+    ],
+    "diseases": [
+      "Alzheimer's Disease",
+      "Memory Decline"
+    ],
+    "enrollment": ""
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_alzheimer_s_disease_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_diagnosis_of_disorder_of_nervous_system_now"
+  ]
+}

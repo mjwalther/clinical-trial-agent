@@ -1,0 +1,10 @@
+[
+  "patient_has_undergone_hospital_admission_inthehistory",
+  "patient_has_finding_of_diagnosis_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_has_finding_of_immunosuppression_now",
+  "patient_is_undergoing_immunosuppressive_therapy_now",
+  "patient_has_finding_of_neutropenia_now",
+  "patient_risk_factor_value_recorded_now_withunit_count",
+  "patient_is_pregnant_now"
+]

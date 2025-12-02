@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_alzheimer_s_disease_inthehistory",
+  "patient_has_diagnosis_of_alzheimer_s_disease_now",
+  "patient_has_finding_of_lesion_of_brain_now",
+  "patient_has_finding_of_traumatic_brain_injury_now",
+  "patient_is_exposed_to_drug_or_medicament_inthepast30days",
+  "patient_has_undergone_therapeutic_procedure_inthehistory",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_contraception_now"
+]

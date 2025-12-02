@@ -1,0 +1,29 @@
+{
+  "patient_id": "sigir-201417",
+  "rank_folder": "rank7_NCT01495806",
+  "trial_info": {
+    "trial_id": "NCT01495806",
+    "title": "Glucomannan for the Treatment of Abdominal Pain-related Functional Gastrointestinal Disorders in Childhood",
+    "brief_summary": "Background: Functional abdominal pain disorders (FAPD) are common in school-aged children; however, there is no reliable treatment.~Aim: To determine the efficacy and safety of glucomannan for treating FAPD in children.~Trial Setting: Department of Pediatrics, The Medical University of Warsaw.~Intervention: Patients will be enrolled in a double-blind, randomized controlled trial in which they will receive either glucomannan (10g) or placebo for 4 weeks.",
+    "phase": "Phase 4",
+    "drugs": [
+      "Glucomannan",
+      "placebo"
+    ],
+    "diseases": [
+      "Functional Gastrointestinal Disorders"
+    ],
+    "enrollment": "90.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_finding_of_abdominal_pain_now",
+    "patient_has_diagnosis_of_functional_abdominal_pain_syndrome_now",
+    "patient_has_diagnosis_of_nonulcer_dyspepsia_now",
+    "patient_has_diagnosis_of_abdominal_pain_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_diagnosis_of_disorder_of_gastrointestinal_tract_now",
+    "patient_has_diagnosis_of_chronic_disease_now",
+    "patient_has_finding_of_growth_retardation_now"
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_bacterial_infectious_disease_now",
+  "patient_has_finding_of_hyperemic_nasal_mucosa_now",
+  "patient_has_finding_of_posterior_rhinorrhea_now",
+  "patient_has_finding_of_purulent_nasal_discharge_now",
+  "patient_has_undergone_nasal_polypectomy_inthepast90days",
+  "patient_has_undergone_surgical_procedure_inthepast365days",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_body_weight_value_recorded_now_withunit_kilograms"
+]

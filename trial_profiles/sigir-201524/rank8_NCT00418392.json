@@ -1,0 +1,56 @@
+{
+  "patient_id": "sigir-201524",
+  "rank_folder": "rank8_NCT00418392",
+  "trial_info": {
+    "trial_id": "NCT00418392",
+    "title": "Intrapleural Minocycline After Simple Aspiration for the Prevention of Primary Spontaneous Pneumothorax",
+    "brief_summary": "The estimated recurrence rate of primary spontaneous pneumothorax is 23-50% after the first episode, and the optimal treatment remains unknown. In the recently published British Thoracic Society (BTS) guidelines, simple aspiration is recommended as first line treatment for all primary pneumothoraces requiring intervention. However, the 1 year recurrence rate of this procedure was as high as 25-30%, making it inappropriate as a standard of care.~Intrapleural instillation of a chemical irritant (chemical pleurodesis) is an effective way to shorten the duration of air leaks and reduce the rates of recurrent spontaneous pneumothorax in surgical and non-surgical patients. Many chemical irritants (tetracycline, talc, and minocycline) have been used to decrease the rate of recurrence in spontaneous pneumothorax. Tetracycline, which was the most commonly used irritant, is no longer available. Talc insufflation of the pleural cavity is safe and effective for primary spontaneous pneumothorax. However, it should be applied either with surgical or medical thoracoscopy. Minocycline, a derivative of tetracycline, is as effective as tetracycline in inducing pleural fibrosis in rabbits. In the previous studies, we have shown that additional minocycline pleurodesis is a safe and convenient procedure to decrease the rates of ipsilateral recurrence after thoracoscopic treatment of primary spontaneous pneumothorax. In the present study, additional minocycline pleurodesis will be randomly administered in patients with first episode of primary spontaneous pneumothorax after simple aspiration to test if it can reduce the rate of recurrence.",
+    "phase": "Phase 3",
+    "drugs": [
+      "Simple aspiration with minocycline pleurodesis",
+      "simple aspiration"
+    ],
+    "diseases": [
+      "Pneumothorax"
+    ],
+    "enrollment": "300.0"
+  },
+  "inclusion_criteria": [
+    "patient_sex_is_male_now",
+    "patient_sex_is_female_now",
+    "patient_age_value_recorded_now_in_years",
+    "patient_has_finding_of_spontaneous_pneumothorax_inthehistory",
+    "patient_has_finding_of_spontaneous_pneumothorax_now",
+    "patient_has_undergone_aspiration_now",
+    "patient_has_symptoms_of_chest_pain_now",
+    "patient_has_symptoms_of_dyspnea_now",
+    "patient_is_undergoing_aspiration_now",
+    "patient_has_undergone_aspiration_inthehistory",
+    "patient_hemoglobin_concentration_dipstick_finding_value_recorded_now_withunit_grams_per_deciliter",
+    "patient_neutrophil_count_value_recorded_now_withunit_10power9_per_liter",
+    "patient_platelet_count_finding_value_recorded_now_withunit_10power9_per_liter",
+    "patients_liver_function_is_normal_now",
+    "patient_has_finding_of_normal_renal_function_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_asthma_now",
+    "patient_has_finding_of_bronchiectasis_now",
+    "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+    "patient_has_finding_of_disorder_of_lung_now",
+    "patient_has_finding_of_hemothorax_now",
+    "patient_has_finding_of_tension_pneumothorax_now",
+    "patient_has_diagnosis_of_pneumothorax_inthehistory",
+    "patient_has_undergone_surgical_procedure_on_thorax_inthehistory",
+    "patient_has_finding_of_allergy_to_minocycline_now",
+    "patient_has_finding_of_allergy_to_tetracycline_now",
+    "patient_is_pregnant_now",
+    "patient_is_lactating_now",
+    "patient_has_diagnosis_of_congestive_heart_failure_now",
+    "patient_has_finding_of_myocardial_infarction_inthehistory",
+    "patient_has_finding_of_conduction_disorder_of_the_heart_now",
+    "patient_has_finding_of_poor_hypertension_control_now",
+    "patient_has_finding_of_dementia_inthehistory",
+    "patient_has_finding_of_seizure_inthehistory",
+    "patient_has_finding_of_disorder_due_to_infection_now"
+  ]
+}

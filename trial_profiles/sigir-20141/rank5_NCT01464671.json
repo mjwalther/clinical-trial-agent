@@ -1,0 +1,46 @@
+{
+  "patient_id": "sigir-20141",
+  "rank_folder": "rank5_NCT01464671",
+  "trial_info": {
+    "trial_id": "NCT01464671",
+    "title": "Angiomax® or Unfractionated Heparin for Patients Undergoing Percutaneous Coronary Intervention",
+    "brief_summary": "The objective of the study is to assess the safety and efficacy of Angiomax® (bivalirudin) versus unfractionated heparin (UFH) in patients presenting with stable angina or silent ischemia (positive stress test without chest pain) that undergo percutaneous coronary intervention (PCI).~The primary endpoint of the study will be major and minor bleeding events, defined by the REPLACE-2 trial definition, during the index hospitalization and up to 30 days post discharge.",
+    "phase": "Phase 4",
+    "drugs": [
+      "Bivalirudin",
+      "Heparin"
+    ],
+    "diseases": [
+      "Coronary Artery Disease"
+    ],
+    "enrollment": "260.0"
+  },
+  "inclusion_criteria": [
+    "patient_age_value_recorded_now_in_years",
+    "patient_sex_is_male_now",
+    "patient_sex_is_female_now",
+    "patient_has_finding_of_chest_pain_now",
+    "patient_has_finding_of_silent_myocardial_ischemia_233823002_now",
+    "patient_has_finding_of_stable_angina_now",
+    "patient_will_undergo_coronary_angiography_inthefuture",
+    "patient_will_undergo_coronary_angioplasty_inthefuture",
+    "patient_is_exposed_to_aspirin_inthepast30days",
+    "patient_is_exposed_to_aspirin_now",
+    "patient_is_exposed_to_clopidogrel_inthepast30days",
+    "patient_is_exposed_to_clopidogrel_now",
+    "patient_has_finding_of_illness_now",
+    "patient_has_childbearing_potential_now",
+    "patient_is_pregnant_inthepast1days"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_cardiogenic_shock_now",
+    "patient_has_finding_of_acute_coronary_syndrome_now",
+    "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+    "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+    "patient_has_diagnosis_of_heparin_induced_thrombocytopenia_inthehistory",
+    "patient_has_contraindication_to_anticoagulant_inthehistory",
+    "patient_has_contraindication_to_heparin_inthehistory",
+    "patient_is_pregnant_now",
+    "patient_is_breastfeeding_now"
+  ]
+}

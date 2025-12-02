@@ -1,0 +1,45 @@
+{
+  "patient_id": "sigir-201419",
+  "rank_folder": "rank9_NCT00193882",
+  "trial_info": {
+    "trial_id": "NCT00193882",
+    "title": "Advanced Oesophageal Cancer Study to Compare Quality of Life and Palliation of Dysphagia.",
+    "brief_summary": "To compare the treatment of gullet cancer with radiotherapy alone and assess the advantage and toxicity of adding chemotherapy. The hypothesis to be tested is as follows: That the addition of chemotherapy to a short course of radiation treatment improves the proportion of patients who achieve relief of dysphagia and improves quality of life compared to radiation alone in patients with advanced oesophageal cancer.",
+    "phase": "Phase 3",
+    "drugs": [
+      "Cisplatin",
+      "Radiotherapy",
+      "5-Fluorouracil"
+    ],
+    "diseases": [
+      "Esophagus Cancer"
+    ],
+    "enrollment": "220.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_carcinoma_of_esophagus_now",
+    "patient_has_finding_of_disease_now",
+    "patient_has_finding_of_intercurrent_disease_now",
+    "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+    "patient_dysphagia_value_recorded_now_withunit_score",
+    "patient_ecog_performance_status_value_recorded_now_withunit_none",
+    "patient_age_value_recorded_now_in_years",
+    "patient_can_undergo_chemotherapy_now",
+    "patients_hematologic_function_is_normal_now",
+    "patient_has_childbearing_potential_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_undergone_brachytherapy_inthehistory",
+    "patient_has_undergone_megavoltage_radiation_therapy_inthehistory",
+    "patient_has_finding_of_malignant_neoplastic_disease_now",
+    "patient_is_pregnant_now",
+    "patient_is_lactating_now",
+    "patient_has_finding_of_tracheoesophageal_fistula_now",
+    "patient_has_undergone_chemotherapy_inthehistory",
+    "patient_has_undergone_ct_of_abdomen_inthehistory",
+    "patient_has_undergone_ct_of_chest_inthehistory",
+    "patient_has_undergone_blood_chemistry_inthehistory",
+    "patient_has_undergone_complete_blood_count_inthehistory",
+    "patient_has_undergone_measurement_of_renal_clearance_of_creatinine_inthehistory"
+  ]
+}

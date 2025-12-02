@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_body_weight_value_recorded_now_withunit_kilograms",
+  "patient_axillary_temperature_value_recorded_now_withunit_celsius"
+]

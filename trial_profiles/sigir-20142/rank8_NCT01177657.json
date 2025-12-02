@@ -1,0 +1,29 @@
+{
+  "patient_id": "sigir-20142",
+  "rank_folder": "rank8_NCT01177657",
+  "trial_info": {
+    "trial_id": "NCT01177657",
+    "title": "Study to Evaluate the Effectiveness of Rotarix™ Against Severe Gastroenteritis Among Hospitalized Children in Brazil",
+    "brief_summary": "The purpose of this study is to estimate the effectiveness of 2 doses of Rotarix™ vaccination in preventing rotavirus severe gastroenteritis among children hospitalized in Belem area, Brazil.",
+    "phase": "",
+    "drugs": [
+      "Stool sampling"
+    ],
+    "diseases": [
+      "Rotavirus Gastroenteritis"
+    ],
+    "enrollment": "1944.0"
+  },
+  "inclusion_criteria": [
+    "patient_sex_is_male_now",
+    "patient_sex_is_female_now",
+    "patient_has_finding_of_gastroenteritis_now",
+    "patient_has_finding_of_gastroenteritis_inthehistory",
+    "patient_has_undergone_identification_of_rotavirus_antigen_in_feces_inthepast48hours_outcome_is_positive",
+    "patient_has_undergone_identification_of_rotavirus_antigen_in_feces_now_outcome_is_positive"
+  ],
+  "exclusion_criteria": [
+    "patient_has_diagnosis_of_gastroenteritis_now",
+    "patient_has_diagnosis_of_healthcare_associated_infectious_disease_now"
+  ]
+}

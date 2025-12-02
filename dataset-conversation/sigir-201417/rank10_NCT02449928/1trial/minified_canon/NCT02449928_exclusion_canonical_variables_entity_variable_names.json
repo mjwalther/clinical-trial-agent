@@ -1,0 +1,9 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_is_taking_linezolid_containing_product_now",
+  "patient_has_diagnosis_of_pheochromocytoma_now",
+  "patient_has_diagnosis_of_malignant_tumor_of_lymphoid_hemopoietic_and_related_tissue_now",
+  "patient_is_undergoing_continuous_venovenous_hemofiltration_now"
+]

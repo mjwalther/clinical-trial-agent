@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_allergy_to_penicillin_inthehistory",
+  "patient_has_finding_of_allergy_to_metronidazole_inthehistory",
+  "patient_is_taking_metronidazole_containing_product_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_is_exposed_to_alcohol_now",
+  "patient_has_finding_of_alcoholism_now",
+  "patient_is_undergoing_enrollment_in_clinical_trial_now",
+  "patient_has_diagnosis_of_peritonsillar_abscess_now",
+  "patient_will_undergo_tonsillectomy_inthefuture30days"
+]

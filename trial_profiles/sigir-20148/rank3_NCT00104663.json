@@ -1,0 +1,27 @@
+{
+  "patient_id": "sigir-20148",
+  "rank_folder": "rank3_NCT00104663",
+  "trial_info": {
+    "trial_id": "NCT00104663",
+    "title": "PRION-1: Quinacrine for Human Prion Disease",
+    "brief_summary": "PRION-1 aims to assess the activity and safety of Quinacrine (Mepacrine hydrochloride) in human prion disease. It also aims to establish an appropriate framework for the clinical assessment of therapeutic options for human prion disease that can be refined or expanded in the future, as new agents become available.",
+    "phase": "",
+    "drugs": [
+      "Quinacrine"
+    ],
+    "diseases": [
+      "Prion Disease"
+    ],
+    "enrollment": "160.0"
+  },
+  "inclusion_criteria": [
+    "patient_age_value_recorded_now_in_years",
+    "patient_has_diagnosis_of_prion_disease_inthehistory",
+    "patient_has_diagnosis_of_prion_disease_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_coma_now",
+    "patient_has_finding_of_disease_now",
+    "patient_has_finding_of_allergy_to_quinacrine_now"
+  ]
+}

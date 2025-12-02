@@ -1,0 +1,1183 @@
+{
+  "patient_id": "sigir-201419",
+  "patient_summary": "A 52-year-old African American man with a history of heavy smoking and drinking, describes progressive dysphagia that began several months ago. He first noticed difficulty swallowing meat. His trouble swallowing then progressed to include other solid foods, soft foods, and then liquids. He is able to locate the point where food is obstructed at the lower end of his sternum. He has lost a total of 25 pounds.",
+  "trials_evaluated": [
+    {
+      "rank": "rank10_NCT00408590",
+      "trial_id": "NCT00408590",
+      "title": "Recombinant Measles Virus Vaccine Therapy and Oncolytic Virus Therapy in Treating Patients With Progressive, Recurrent, or Refractory Ovarian Epithelial Cancer or Primary Peritoneal Cancer",
+      "phase": "Phase 1",
+      "drugs": [
+        "carcinoembryonic antigen-expressing measles virus",
+        "oncolytic measles virus encoding thyroidal sodium iodide symporter",
+        "reverse transcriptase-polymerase chain reaction",
+        "laboratory biomarker analysis"
+      ],
+      "diseases": [
+        "Ovarian Cancer",
+        "Primary Peritoneal Cavity Cancer"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 42,
+          "satisfied": 39,
+          "violated": 3,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_germ_cell_tumor_of_ovary_now",
+                "normalized": "patient_has_finding_of_germ_cell_tumor_of_ovary",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_sex_cord_tumor_of_ovary_now",
+                "normalized": "patient_has_finding_of_sex_cord_tumor_of_ovary",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_administration_of_antineoplastic_agent_inthehistory",
+                "normalized": "patient_has_undergone_administration_of_antineoplastic_agent",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_ecog_performance_status_grade_3_now",
+                "normalized": "patient_has_finding_of_ecog_performance_status_grade_3",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_ecog_performance_status_grade_4_now",
+                "normalized": "patient_has_finding_of_ecog_performance_status_grade_4",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_due_to_infection_inthepast5days",
+                "normalized": "patient_has_finding_of_disorder_due_to_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_mantoux_positive_inthehistory",
+                "normalized": "patient_has_finding_of_mantoux_positive",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_tuberculosis_inthehistory",
+                "normalized": "patient_has_diagnosis_of_tuberculosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_carcinoma_in_situ_of_uterine_cervix_inthehistory",
+                "normalized": "patient_has_diagnosis_of_carcinoma_in_situ_of_uterine_cervix",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplasm_of_skin_inthehistory",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplasm_of_skin",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_biological_treatment_inthepast4weeks",
+                "normalized": "patient_has_undergone_biological_treatment",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_chemotherapy_inthepast3weeks",
+                "normalized": "patient_has_undergone_chemotherapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_immunological_therapy_inthepast4weeks",
+                "normalized": "patient_has_undergone_immunological_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_incision_of_intestine_inthepast3weeks",
+                "normalized": "patient_has_undergone_incision_of_intestine",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_lysis_of_adhesions_now",
+                "normalized": "patient_has_undergone_lysis_of_adhesions",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_operation_on_abdominal_region_inthepast3weeks",
+                "normalized": "patient_has_undergone_operation_on_abdominal_region",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_gene_therapy_inthehistory",
+                "normalized": "patient_has_undergone_gene_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_chemotherapy_inthehistory",
+                "normalized": "patient_has_undergone_chemotherapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+                "normalized": "patient_has_diagnosis_of_coronary_arteriosclerosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_symptoms_of_coronary_arteriosclerosis_now",
+                "normalized": "patient_has_symptoms_of_coronary_arteriosclerosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_support_transfusion_therapy_now",
+                "normalized": "patient_is_undergoing_support_transfusion_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_secondary_malignant_neoplasm_of_central_nervous_system_now",
+                "normalized": "patient_has_finding_of_secondary_malignant_neoplasm_of_central_nervous_system",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_seizure_disorder_now",
+                "normalized": "patient_has_finding_of_seizure_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hiv_positive_now",
+                "normalized": "patient_has_finding_of_hiv_positive",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_immunodeficiency_disorder_inthehistory",
+                "normalized": "patient_has_finding_of_immunodeficiency_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_transplantation_inthehistory",
+                "normalized": "patient_has_undergone_transplantation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_chronic_hepatitis_c_inthehistory",
+                "normalized": "patient_has_finding_of_chronic_hepatitis_c",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_chronic_type_b_viral_hepatitis_inthehistory",
+                "normalized": "patient_has_finding_of_chronic_type_b_viral_hepatitis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_chemotherapy_now",
+                "normalized": "patient_is_undergoing_chemotherapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_immunological_therapy_now",
+                "normalized": "patient_is_undergoing_immunological_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_drug_or_medicament_now",
+                "normalized": "patient_is_exposed_to_drug_or_medicament",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_of_liver_now",
+                "normalized": "patient_has_finding_of_disease_of_liver",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_disorder_of_abdomen_value_recorded_now_withunit_cm",
+                "normalized": "patient_disorder_of_abdomen_value_recorded_now_withunit_cm",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_of_abdomen_now",
+                "normalized": "patient_has_finding_of_disorder_of_abdomen",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_corticosteroid_and_corticosteroid_derivative_containing_product_now",
+                "normalized": "patient_is_taking_corticosteroid_and_corticosteroid_derivative_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_immunodeficiency_disorder_now",
+                "normalized": "patient_has_finding_of_immunodeficiency_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_measles_vaccination_inthehistory",
+                "normalized": "patient_has_undergone_measles_vaccination",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergy_to_contrast_media_now",
+                "normalized": "patient_has_finding_of_allergy_to_contrast_media",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergy_to_iodine_compound_now",
+                "normalized": "patient_has_finding_of_allergy_to_iodine_compound",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_disease_now",
+                "normalized": "patient_has_diagnosis_of_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_disease",
+                    "preferred_term": null,
+                    "conceptId": "64572001",
+                    "fact_id": "diag_global_004"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                    "preferred_term": null,
+                    "conceptId": "363346000",
+                    "fact_id": "diag_global_001"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_now",
+                "normalized": "patient_has_finding_of_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_disease",
+                    "preferred_term": null,
+                    "conceptId": "64572001",
+                    "fact_id": "fact005"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 3 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank1_NCT00974064",
+      "trial_id": "NCT00974064",
+      "title": "The Natural History of Gene Expression in the Lung Cells of Non-Smokers, Smokers and Ex-Smokers in Health and Disease",
+      "phase": "",
+      "drugs": [],
+      "diseases": [
+        "Chronic Obstructive Pulmonary Disease (COPD)",
+        "Smoking",
+        "Smoking Cessation",
+        "Chronic Bronchitis",
+        "Emphysema"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 19,
+          "satisfied": 19,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_now",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_habitual_drinker_inthepast6months",
+                "normalized": "patient_has_finding_of_habitual_drinker",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_habitual_drug_user_inthepast6months",
+                "normalized": "patient_has_finding_of_habitual_drug_user",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_now",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_infectious_disease_of_lung_inthepast3months",
+                "normalized": "patient_has_diagnosis_of_infectious_disease_of_lung",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_infectious_disease_of_lung_now",
+                "normalized": "patient_has_diagnosis_of_infectious_disease_of_lung",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergy_to_lidocaine_now",
+                "normalized": "patient_has_finding_of_allergy_to_lidocaine",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_dialysis_procedure_now",
+                "normalized": "patient_is_undergoing_dialysis_procedure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_kidney_disease_now",
+                "normalized": "patient_has_finding_of_kidney_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_sex_is_female_now",
+                "normalized": "patient_sex_is_female",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_lactating_now",
+                "normalized": "patient_is_lactating",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_able_to_be_pregnant_inthefuture12months",
+                "normalized": "patient_is_able_to_be_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+                "normalized": "patient_has_finding_of_human_immunodeficiency_virus_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_congestive_heart_failure_inthehistory",
+                "normalized": "patient_has_finding_of_congestive_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_coronary_arteriosclerosis_now",
+                "normalized": "patient_has_finding_of_coronary_arteriosclerosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_myocardial_infarction_inthepast12months",
+                "normalized": "patient_has_finding_of_myocardial_infarction",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_preinfarction_syndrome_now",
+                "normalized": "patient_has_finding_of_preinfarction_syndrome",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_condition_finding_now",
+                "normalized": "patient_has_finding_of_disease_condition_finding",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 19 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank2_NCT01862809",
+      "trial_id": "NCT01862809",
+      "title": "Cigarette Smoking and Oral Microbiota",
+      "phase": "",
+      "drugs": [],
+      "diseases": [
+        "Microbiota",
+        "Lung Cancer",
+        "Oral Cancer"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 3,
+          "satisfied": 2,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_periodontal_disease_inthehistory",
+                "normalized": "patient_has_diagnosis_of_periodontal_disease",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                    "preferred_term": null,
+                    "conceptId": "363346000",
+                    "fact_id": "diag_global_001"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank3_NCT02164513",
+      "trial_id": "NCT02164513",
+      "title": "A Study Comparing the Efficacy, Safety and Tolerability of Fixed Dose Combination (FDC) of FF/UMEC/VI With the FDC of FF/VI and UMEC/VI; Administered Once-daily Via a Dry Powder Inhaler (DPI) in Subjects With Chronic Obstructive Pulmonary Disease (COPD)",
+      "phase": "Phase 3",
+      "drugs": [
+        "fluticasone furoate (FF)",
+        "vilanterol (VI)",
+        "umeclidinium bromide (UMEC)"
+      ],
+      "diseases": [
+        "Pulmonary Disease",
+        "Chronic Obstructive"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 52,
+          "satisfied": 52,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_lactating_now",
+                "normalized": "patient_is_lactating",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_inthefuture",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_inthehistory",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_now",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+                "normalized": "patient_has_diagnosis_of_chronic_obstructive_lung_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_alpha_1_antitrypsin_deficiency_now",
+                "normalized": "patient_has_diagnosis_of_alpha_1_antitrypsin_deficiency",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_fibrosis_of_lung_now",
+                "normalized": "patient_has_diagnosis_of_fibrosis_of_lung",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_interstitial_lung_disease_now",
+                "normalized": "patient_has_diagnosis_of_interstitial_lung_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung_now",
+                "normalized": "patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_pulmonary_hypertension_now",
+                "normalized": "patient_has_diagnosis_of_pulmonary_hypertension",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_lung_volume_reduction_surgery_inthepast12months",
+                "normalized": "patient_has_undergone_lung_volume_reduction_surgery",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+                "normalized": "patient_has_finding_of_human_immunodeficiency_virus_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_immunosuppression_now",
+                "normalized": "patient_has_finding_of_immunosuppression",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_myasthenia_gravis_now",
+                "normalized": "patient_has_finding_of_myasthenia_gravis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_parkinson_s_disease_now",
+                "normalized": "patient_has_finding_of_parkinson_s_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_systemic_lupus_erythematosus_now",
+                "normalized": "patient_has_finding_of_systemic_lupus_erythematosus",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_acute_exacerbation_of_chronic_obstructive_airways_disease_inthehistory",
+                "normalized": "patient_has_diagnosis_of_acute_exacerbation_of_chronic_obstructive_airways_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_pneumonia_inthehistory",
+                "normalized": "patient_has_diagnosis_of_pneumonia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_now",
+                "normalized": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_pneumonia_now",
+                "normalized": "patient_has_finding_of_pneumonia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_inthehistory",
+                "normalized": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_pneumonia_inthehistory",
+                "normalized": "patient_has_finding_of_pneumonia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_respiratory_tract_infection_inthehistory",
+                "normalized": "patient_has_finding_of_respiratory_tract_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+                "normalized": "patient_has_finding_of_chronic_obstructive_lung_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_plain_chest_x_ray_now_outcome_is_abnormal",
+                "normalized": "patient_has_undergone_plain_chest_x_ray_now_outcome_is_abnormal",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_pleural_effusion_now",
+                "normalized": "patient_has_finding_of_pleural_effusion",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_pleural_scarring_now",
+                "normalized": "patient_has_finding_of_pleural_scarring",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_cardiovascular_system_alteration_inthehistory",
+                "normalized": "patient_has_finding_of_cardiovascular_system_alteration",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_of_endocrine_system_inthehistory",
+                "normalized": "patient_has_finding_of_disorder_of_endocrine_system",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_renal_alteration_inthehistory",
+                "normalized": "patient_has_finding_of_renal_alteration",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_sensory_disorder_inthehistory",
+                "normalized": "patient_has_finding_of_sensory_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_angina_pectoris_inthepast6months",
+                "normalized": "patient_has_finding_of_angina_pectoris",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_cardiac_arrhythmia_inthepast3months",
+                "normalized": "patient_has_finding_of_cardiac_arrhythmia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_failure_now",
+                "normalized": "patient_has_finding_of_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_myocardial_infarction_inthepast6months",
+                "normalized": "patient_has_finding_of_myocardial_infarction",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_atrial_fibrillation_now",
+                "normalized": "patient_has_finding_of_atrial_fibrillation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_complete_atrioventricular_block_now",
+                "normalized": "patient_has_finding_of_complete_atrioventricular_block",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_mobitz_type_ii_atrioventricular_block_now",
+                "normalized": "patient_has_finding_of_mobitz_type_ii_atrioventricular_block",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_nonsustained_ventricular_tachycardia_now",
+                "normalized": "patient_has_finding_of_nonsustained_ventricular_tachycardia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_sustained_ventricular_tachycardia_now",
+                "normalized": "patient_has_finding_of_sustained_ventricular_tachycardia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_acetylcholine_receptor_antagonist_inthehistory",
+                "normalized": "patient_has_allergy_to_acetylcholine_receptor_antagonist",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_lactose_inthehistory",
+                "normalized": "patient_has_allergy_to_lactose",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_magnesium_stearate_inthehistory",
+                "normalized": "patient_has_allergy_to_magnesium_stearate",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_milk_protein_inthehistory",
+                "normalized": "patient_has_allergy_to_milk_protein",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_muscarinic_receptor_antagonist_inthehistory",
+                "normalized": "patient_has_allergy_to_muscarinic_receptor_antagonist",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_long_term_oxygen_therapy_now",
+                "normalized": "patient_is_undergoing_long_term_oxygen_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_long_term_oxygen_therapy_value_recorded_now_withunit_liters_per_minute",
+                "normalized": "patient_long_term_oxygen_therapy_value_recorded_now_withunit_liters_per_minute",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_albuterol_now",
+                "normalized": "patient_is_exposed_to_albuterol",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_inthepast2years",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthepast2years",
+                "normalized": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disability_now",
+                "normalized": "patient_has_finding_of_disability",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 52 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank4_NCT02206971",
+      "trial_id": "NCT02206971",
+      "title": "Biomarker Feedback for Smoking Cessation",
+      "phase": "",
+      "drugs": [
+        "urine analyses feedback"
+      ],
+      "diseases": [
+        "Cigarette Smoking"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 1,
+          "satisfied": 1,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank5_NCT02220387",
+      "trial_id": "NCT02220387",
+      "title": "Molecular, Cytological Features and Genetic Susceptibility of COPD Attributable to Different Environmental Exposures",
+      "phase": "",
+      "drugs": [
+        "exposure to respirable silica dust",
+        "exposure to polycyclic aromatic hydrocarbons exhaust"
+      ],
+      "diseases": [
+        "Chronic Obstructive Pulmonary Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 13,
+          "satisfied": 12,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_exposed_to_smoke_inthehistory",
+                "normalized": "patient_is_exposed_to_smoke",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_age_value_recorded_now_in_years",
+                "normalized": "patient_age_value_recorded_now_in_years",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_now",
+                "normalized": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_now",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_of_lung_now",
+                "normalized": "patient_has_finding_of_disorder_of_lung",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_tuberculosis_now",
+                "normalized": "patient_has_finding_of_tuberculosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_allergic_disorder_now",
+                "normalized": "patient_has_diagnosis_of_allergic_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_autoimmune_disease_now",
+                "normalized": "patient_has_diagnosis_of_autoimmune_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_due_to_infection_now",
+                "normalized": "patient_has_finding_of_disorder_due_to_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+                "normalized": "patient_has_finding_of_human_immunodeficiency_virus_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_immunodeficiency_disorder_now",
+                "normalized": "patient_has_finding_of_immunodeficiency_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_caused_by_parasite_now",
+                "normalized": "patient_has_finding_of_disease_caused_by_parasite",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                    "preferred_term": null,
+                    "conceptId": "363346000",
+                    "fact_id": "diag_global_001"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank6_NCT02284295",
+      "trial_id": "NCT02284295",
+      "title": "Molecular, Cytological Features and Genetic Susceptibility of COPD Attributable to Different Environmental Exposures 2",
+      "phase": "",
+      "drugs": [
+        "exposure to respirable silica dust",
+        "exposure to aromatic hydrocarbons"
+      ],
+      "diseases": [
+        "Chronic Obstructive Pulmonary Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 13,
+          "satisfied": 12,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_exposed_to_smoke_inthehistory",
+                "normalized": "patient_is_exposed_to_smoke",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_age_value_recorded_now_in_years",
+                "normalized": "patient_age_value_recorded_now_in_years",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_now",
+                "normalized": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_now",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_disorder_of_lung_now",
+                "normalized": "patient_has_diagnosis_of_disorder_of_lung",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_tuberculosis_now",
+                "normalized": "patient_has_diagnosis_of_tuberculosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergic_disorder_now",
+                "normalized": "patient_has_finding_of_allergic_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_autoimmune_disease_now",
+                "normalized": "patient_has_finding_of_autoimmune_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_disorder_due_to_infection_now",
+                "normalized": "patient_has_diagnosis_of_disorder_due_to_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_now",
+                "normalized": "patient_has_diagnosis_of_human_immunodeficiency_virus_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_immunodeficiency_disorder_now",
+                "normalized": "patient_has_diagnosis_of_immunodeficiency_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_disease_caused_by_parasite_now",
+                "normalized": "patient_has_diagnosis_of_disease_caused_by_parasite",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                    "preferred_term": null,
+                    "conceptId": "363346000",
+                    "fact_id": "diag_global_001"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank7_NCT02603393",
+      "trial_id": "NCT02603393",
+      "title": "Evaluation of the Efficacy and Safety of QVA149 (110/50 μg o.d.) vs Tiotropium (18 µg o.d.) + Salmeterol/Fluticasone Propionate FDC (50/500 µg b.i.d.) in Patients With Moderate to Severe COPD",
+      "phase": "Phase 4",
+      "drugs": [
+        "QVA149",
+        "Tiotropium",
+        "Salmeterol/fluticasone"
+      ],
+      "diseases": [
+        "Chronic Obstructive Pulmonary Disease (COPD)"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 2,
+          "satisfied": 2,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_acute_exacerbation_of_chronic_obstructive_airways_disease_value_recorded_inthepast1years_withunit_count",
+                "normalized": "patient_acute_exacerbation_of_chronic_obstructive_airways_disease_value_recorded_inthepast1years_withunit_count",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_inthehistory",
+                "normalized": "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 2 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank8_NCT00180635",
+      "trial_id": "NCT00180635",
+      "title": "NO Donors and Inhibitors to Study Imbalance of Nitrogen Stress and Antioxidant Defense in COPD",
+      "phase": "",
+      "drugs": [
+        "Aminoguanidine",
+        "Placebos"
+      ],
+      "diseases": [
+        "Chronic Obstructive Pulmonary Disease"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 10,
+          "satisfied": 10,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_exposed_to_steroid_inthepast4weeks",
+                "normalized": "patient_is_exposed_to_steroid",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_steroid_now",
+                "normalized": "patient_is_exposed_to_steroid",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_respiratory_tract_infection_inthehistory",
+                "normalized": "patient_has_finding_of_respiratory_tract_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_sex_is_female_now",
+                "normalized": "patient_sex_is_female",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_lactating_now",
+                "normalized": "patient_is_lactating",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_inthehistory",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_now",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthehistory",
+                "normalized": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now",
+                "normalized": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 10 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank9_NCT00193882",
+      "trial_id": "NCT00193882",
+      "title": "Advanced Oesophageal Cancer Study to Compare Quality of Life and Palliation of Dysphagia.",
+      "phase": "Phase 3",
+      "drugs": [
+        "Cisplatin",
+        "Radiotherapy",
+        "5-Fluorouracil"
+      ],
+      "diseases": [
+        "Esophagus Cancer"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 12,
+          "satisfied": 11,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_undergone_brachytherapy_inthehistory",
+                "normalized": "patient_has_undergone_brachytherapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_megavoltage_radiation_therapy_inthehistory",
+                "normalized": "patient_has_undergone_megavoltage_radiation_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_lactating_now",
+                "normalized": "patient_is_lactating",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_tracheoesophageal_fistula_now",
+                "normalized": "patient_has_finding_of_tracheoesophageal_fistula",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_chemotherapy_inthehistory",
+                "normalized": "patient_has_undergone_chemotherapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_ct_of_abdomen_inthehistory",
+                "normalized": "patient_has_undergone_ct_of_abdomen",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_ct_of_chest_inthehistory",
+                "normalized": "patient_has_undergone_ct_of_chest",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_blood_chemistry_inthehistory",
+                "normalized": "patient_has_undergone_blood_chemistry",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_complete_blood_count_inthehistory",
+                "normalized": "patient_has_undergone_complete_blood_count",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_measurement_of_renal_clearance_of_creatinine_inthehistory",
+                "normalized": "patient_has_undergone_measurement_of_renal_clearance_of_creatinine",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_malignant_neoplastic_disease_now",
+                "normalized": "patient_has_finding_of_malignant_neoplastic_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_malignant_neoplastic_disease",
+                    "preferred_term": null,
+                    "conceptId": "363346000",
+                    "fact_id": "diag_global_001"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    }
+  ],
+  "summary": {
+    "total_trials": 10,
+    "eligible_trials": 5,
+    "ineligible_trials": 5
+  }
+}

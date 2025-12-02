@@ -1,0 +1,13 @@
+{
+  "canonical_nct_id": "NCT02120664",
+  "status": "survivor",
+  "rep_trial_id": 3487,
+  "rep_status": "survivor",
+  "total_clauses": 2,
+  "unsat_any": 0,
+  "unsat_explicit": 0,
+  "frac_unsat_any": 0.0,
+  "pct_unsat_any": 0.0,
+  "pct_unsat_explicit": 0.0,
+  "best_sub_rank": 3
+}

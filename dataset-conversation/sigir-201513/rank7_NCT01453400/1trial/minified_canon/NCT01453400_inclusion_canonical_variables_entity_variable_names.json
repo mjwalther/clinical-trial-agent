@@ -1,0 +1,18 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_sore_throat_symptom_now",
+  "patient_has_finding_of_pain_in_throat_inthehistory",
+  "patient_pain_intensity_value_recorded_inthehistory_withunit_millimeters",
+  "patients_pain_intensity_is_positive_inthehistory",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_bilateral_oophorectomy_inthehistory",
+  "patient_has_finding_of_contraception_now",
+  "patient_has_undergone_hysterectomy_inthehistory",
+  "patient_has_finding_of_iud_contraception_now",
+  "patient_has_finding_of_oral_contraception_now",
+  "patient_has_finding_of_transdermal_contraceptive_now",
+  "patient_can_undergo_pain_assessment_now"
+]

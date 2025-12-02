@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_has_finding_of_acute_coronary_syndrome_now",
+  "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_diagnosis_of_heparin_induced_thrombocytopenia_inthehistory",
+  "patient_has_contraindication_to_anticoagulant_inthehistory",
+  "patient_has_contraindication_to_heparin_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now"
+]

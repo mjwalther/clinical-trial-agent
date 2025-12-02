@@ -1,0 +1,22 @@
+{
+  "_id": "NCT00493714",
+  "title": "Delirium Recall in Advanced Cancer Patients",
+  "text": "Summary: Primary Objectives:~To determine the proportion of patients who experience partial or complete recollection of symptoms of delirium and the level of distress associated with this recall.~To determine caregiver's level of distress associated with the patient's episode of delirium.\nInclusion criteria: inclusion criteria: \n\n Presence of advanced cancer, defined as local recurrent and/or metastatic. \n\n History of an episode of delirium during the patient's current inpatient admission, diagnosis of delirium will be made by one of the palliative care specialists according to DSM-IV-TR criteria. \n\n If the patient has a complete recovery from the episode of delirium, the patient must be approached within 3 days for the possibility of inclusion in study. Complete recovery will be defined as diagnosis of complete resolution of all symptoms of delirium according to DSM-IV-TR criteria by one of the palliative care specialists. \n\n Ability to communicate in the English language. \n\n Caregiver who is 18 years of age or older (assessments used in this study have not been validated in pediatric population), is able to communicate in English and comprehend the assessment questionnaire, and is at the bedside for a significant length of time (approximately 4 hours) each day during the delirium episode. Both the patient and their caregiver must agree to participate for inclusion in the study. \n\n Written informed consent signed by the patients and the participating caregivers. \n\n MDAS [Memorial Delirium Assessment Scale] < 13 (Scores of 13 or above likely reflect the presence of delirium). \n\n Patients will be recruited from the palliative care mobile team or the inpatient palliative care unit. \n\n \nExclusion criteria: : \n\n Refusal of both the patient and their caregiver to complete assessments \n\n Inability to complete assessment due to sensorial deficits other than cognition; e.g. blindness, deafness, aphasia, etc., that might impact the patient's ability to recall the episode of delirium.",
+  "metadata": {
+    "brief_title": "Delirium Recall in Advanced Cancer Patients",
+    "phase": "",
+    "drugs": "['Questionnaire']",
+    "drugs_list": [
+      "Questionnaire"
+    ],
+    "diseases": "['Advanced Cancer', 'Delirium']",
+    "diseases_list": [
+      "Advanced Cancer",
+      "Delirium"
+    ],
+    "enrollment": "200.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Presence of advanced cancer, defined as local recurrent and/or metastatic. \n\n History of an episode of delirium during the patient's current inpatient admission, diagnosis of delirium will be made by one of the palliative care specialists according to DSM-IV-TR criteria. \n\n If the patient has a complete recovery from the episode of delirium, the patient must be approached within 3 days for the possibility of inclusion in study. Complete recovery will be defined as diagnosis of complete resolution of all symptoms of delirium according to DSM-IV-TR criteria by one of the palliative care specialists. \n\n Ability to communicate in the English language. \n\n Caregiver who is 18 years of age or older (assessments used in this study have not been validated in pediatric population), is able to communicate in English and comprehend the assessment questionnaire, and is at the bedside for a significant length of time (approximately 4 hours) each day during the delirium episode. Both the patient and their caregiver must agree to participate for inclusion in the study. \n\n Written informed consent signed by the patients and the participating caregivers. \n\n MDAS [Memorial Delirium Assessment Scale] < 13 (Scores of 13 or above likely reflect the presence of delirium). \n\n Patients will be recruited from the palliative care mobile team or the inpatient palliative care unit. \n\n ",
+    "exclusion_criteria": ": \n\n Refusal of both the patient and their caregiver to complete assessments \n\n Inability to complete assessment due to sensorial deficits other than cognition; e.g. blindness, deafness, aphasia, etc., that might impact the patient's ability to recall the episode of delirium.",
+    "brief_summary": "Primary Objectives:~To determine the proportion of patients who experience partial or complete recollection of symptoms of delirium and the level of distress associated with this recall.~To determine caregiver's level of distress associated with the patient's episode of delirium."
+  }
+}

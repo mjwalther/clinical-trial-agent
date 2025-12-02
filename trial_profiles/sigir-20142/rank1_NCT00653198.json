@@ -1,0 +1,31 @@
+{
+  "patient_id": "sigir-20142",
+  "rank_folder": "rank1_NCT00653198",
+  "trial_info": {
+    "trial_id": "NCT00653198",
+    "title": "Effectiveness of Rotarix™ Against Rotavirus Severe Gastroenteritis (RV SGE) in Infants in Panama",
+    "brief_summary": "This study aims to estimate the effectiveness of Rotarix™ vaccine which is used nationwide as a part of the expanded program on immunization (EPI), in preventing RV SGE among hospitalised children born after 1 March 2006, which corresponds to the date of introduction of Rotarix™ in the national immunization program.",
+    "phase": "",
+    "drugs": [
+      "No intervention"
+    ],
+    "diseases": [
+      "Infections",
+      "Rotavirus"
+    ],
+    "enrollment": "885.0"
+  },
+  "inclusion_criteria": [
+    "patient_sex_is_male_now",
+    "patient_sex_is_female_now",
+    "patient_has_finding_of_gastroenteritis_inthehistory",
+    "patient_has_undergone_enzyme_linked_immunosorbent_assay_now",
+    "patient_has_undergone_identification_of_rotavirus_antigen_in_feces_now_outcome_is_positive",
+    "patient_has_undergone_enzyme_linked_immunosorbent_assay_inthehistory",
+    "patient_has_undergone_identification_of_rotavirus_antigen_in_feces_inthehistory_outcome_is_positive"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_inpatient_stay_inthehistory",
+    "patient_has_finding_of_gastroenteritis_now"
+  ]
+}

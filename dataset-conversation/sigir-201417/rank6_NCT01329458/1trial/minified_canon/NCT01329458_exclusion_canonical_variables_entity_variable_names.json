@@ -1,0 +1,11 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_conduction_disorder_of_the_heart_inthehistory",
+  "patient_has_diagnosis_of_new_york_heart_association_classification_class_iii_inthehistory",
+  "patient_has_diagnosis_of_new_york_heart_association_classification_class_iv_inthehistory",
+  "patient_has_diagnosis_of_cyst_now",
+  "patient_has_diagnosis_of_cyst_of_biliary_tract_now",
+  "patient_has_undergone_ultrasonography_now",
+  "patient_has_finding_of_lesion_of_liver_now"
+]
