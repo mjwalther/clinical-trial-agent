@@ -1,5 +1,6 @@
 import json
 import re
+import sqlite3
 from pathlib import Path
 from typing import Dict, List, Set, Tuple, Optional
 import os
@@ -18,9 +19,9 @@ class ClinicalTrialMatchingAgent:
         self.patient_profiles_dir = Path(patient_profiles_dir)
         self.trial_profiles_dir = Path(trial_profiles_dir)
         
-        # Initialize LLM - using gpt-4o-mini (available to all users)
+        # Initialize LLM - using gpt-4o for better reasoning
         self.llm = ChatOpenAI(
-            model="gpt-4o-mini",
+            model="gpt-4o",  # Upgraded from gpt-4o-mini
             temperature=0.7,
             openai_api_key=openai_api_key
         )
@@ -34,6 +35,368 @@ class ClinicalTrialMatchingAgent:
         self.current_patient_name = None
         self.eligible_trials = []
         self.all_trials_with_reasoning = []
+        
+        # Recommended trial profile for detailed Q&A
+        self.recommended_trial_profile = None
+        
+        # Initialize SQL database for preference matching ONLY
+        self.db_path = "trialogue_preferences.db"
+        self.init_preference_database()
+    
+    # =====================================================================
+    # SQL DATABASE METHODS - For preference-based trial narrowing ONLY
+    # =====================================================================
+    
+    def init_preference_database(self):
+        """Initialize SQLite database for storing user preferences and trial characteristics."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        # User preferences table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS user_preferences (
+                session_id TEXT,
+                question_number INTEGER,
+                question TEXT,
+                answer TEXT,
+                preference_type TEXT,
+                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (session_id, question_number)
+            )
+        ''')
+        
+        # Trial characteristics table for eligible trials
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS trial_characteristics (
+                session_id TEXT,
+                trial_id TEXT,
+                trial_index INTEGER,
+                title TEXT,
+                phase TEXT,
+                phase_numeric INTEGER,
+                diseases TEXT,
+                interventions TEXT,
+                brief_summary TEXT,
+                is_early_phase INTEGER,
+                is_late_phase INTEGER,
+                is_invasive INTEGER,
+                PRIMARY KEY (session_id, trial_id)
+            )
+        ''')
+        
+        # Preference-trial scores table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS preference_scores (
+                session_id TEXT,
+                trial_id TEXT,
+                preference_type TEXT,
+                score REAL,
+                reasoning TEXT,
+                PRIMARY KEY (session_id, trial_id, preference_type)
+            )
+        ''')
+        
+        conn.commit()
+        conn.close()
+        
+        print(f"✓ SQL Preference Database initialized at {self.db_path}")
+    
+    def store_user_preference(self, session_id: str, question_number: int, question: str, answer: str, preference_type: str):
+        """Store user preference answer in database."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            INSERT OR REPLACE INTO user_preferences 
+            (session_id, question_number, question, answer, preference_type)
+            VALUES (?, ?, ?, ?, ?)
+        ''', (session_id, question_number, question, answer, preference_type))
+        
+        conn.commit()
+        conn.close()
+        
+        print(f"✓ Stored preference #{question_number} in SQL database")
+    
+    def store_trial_characteristics(self, session_id: str, eligible_trials: List[Dict]):
+        """Store characteristics of eligible trials in database for preference matching."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        # Clear existing trials for this session
+        cursor.execute('DELETE FROM trial_characteristics WHERE session_id = ?', (session_id,))
+        
+        for i, trial_data in enumerate(eligible_trials):
+            trial = trial_data.get('trial', {})
+            trial_info = trial.get('trial_info', {})
+            
+            trial_id = trial_info.get('trial_id', f'trial_{i}')
+            title = trial_info.get('title', 'Unknown')
+            phase = trial_info.get('phase', 'Not listed')
+            diseases = json.dumps(trial_info.get('diseases', []))
+            interventions = json.dumps(trial_info.get('interventions', []))
+            brief_summary = trial_info.get('brief_summary', '')
+            
+            # Classify trial characteristics
+            phase_numeric = self._parse_phase_number(phase)
+            is_early_phase = 1 if phase_numeric <= 2 else 0
+            is_late_phase = 1 if phase_numeric >= 3 else 0
+            is_invasive = self._is_invasive_trial(interventions, brief_summary)
+            
+            cursor.execute('''
+                INSERT INTO trial_characteristics
+                (session_id, trial_id, trial_index, title, phase, phase_numeric, diseases, 
+                 interventions, brief_summary, is_early_phase, is_late_phase, is_invasive)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (session_id, trial_id, i, title, phase, phase_numeric, diseases, 
+                  interventions, brief_summary, is_early_phase, is_late_phase, is_invasive))
+        
+        conn.commit()
+        conn.close()
+        
+        print(f"✓ Stored {len(eligible_trials)} trial characteristics in SQL database")
+    
+    def _parse_phase_number(self, phase: str) -> int:
+        """Extract numeric phase from phase string."""
+        if not phase or phase == 'Not listed' or phase == 'N/A':
+            return 0
+        phase_lower = phase.lower()
+        if 'phase 1' in phase_lower or 'phase i' in phase_lower:
+            return 1
+        elif 'phase 2' in phase_lower or 'phase ii' in phase_lower:
+            return 2
+        elif 'phase 3' in phase_lower or 'phase iii' in phase_lower:
+            return 3
+        elif 'phase 4' in phase_lower or 'phase iv' in phase_lower:
+            return 4
+        return 0
+    
+    def _is_invasive_trial(self, interventions_json: str, summary: str) -> int:
+        """Determine if trial involves invasive procedures."""
+        invasive_keywords = ['surgery', 'surgical', 'invasive', 'injection', 'biopsy', 
+                            'catheter', 'endoscopy', 'procedure', 'operation']
+        
+        try:
+            interventions = json.loads(interventions_json)
+            text_to_check = ' '.join(interventions).lower() + ' ' + summary.lower()
+        except:
+            text_to_check = summary.lower()
+        
+        for keyword in invasive_keywords:
+            if keyword in text_to_check:
+                return 1
+        return 0
+    
+    def _classify_preference_type(self, question: str) -> str:
+        """Classify what type of preference a question is asking about."""
+        question_lower = question.lower()
+        if 'phase' in question_lower or 'early' in question_lower or 'late' in question_lower:
+            return 'phase'
+        elif 'invasive' in question_lower or 'treatment approach' in question_lower:
+            return 'invasiveness'
+        elif 'matter' in question_lower or 'priority' in question_lower or 'important' in question_lower:
+            return 'priority'
+        return 'general'
+    
+    def narrow_trials_by_preferences_sql(self, eligible_trials: List[Dict], preference_qa: List[Dict], session_id: str = "default") -> Dict:
+        """
+        Use SQL queries to match user preferences with trial characteristics.
+        Returns best match plus all trial scores for discussion.
+        """
+        # Store trial characteristics in database
+        self.store_trial_characteristics(session_id, eligible_trials)
+        
+        # Store user preferences in database
+        for i, qa in enumerate(preference_qa, 1):
+            preference_type = self._classify_preference_type(qa['question'])
+            self.store_user_preference(session_id, i, qa['question'], qa['answer'], preference_type)
+        
+        # SQL QUERY: Match preferences to trial characteristics
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        # Query to get all preferences for this session
+        cursor.execute('''
+            SELECT question_number, question, answer, preference_type
+            FROM user_preferences
+            WHERE session_id = ?
+            ORDER BY question_number
+        ''', (session_id,))
+        
+        preferences = cursor.fetchall()
+        
+        # Analyze each preference against trials using SQL queries
+        trial_scores = {}
+        
+        for pref in preferences:
+            question_num, question, answer, pref_type = pref
+            answer_lower = answer.lower()
+            
+            if pref_type == 'phase':
+                # SQL QUERY: Find trials matching phase preference
+                if 'early' in answer_lower or 'experimental' in answer_lower or 'cutting' in answer_lower:
+                    query = '''
+                        SELECT trial_id, trial_index, title, phase
+                        FROM trial_characteristics
+                        WHERE session_id = ? AND is_early_phase = 1
+                    '''
+                else:
+                    query = '''
+                        SELECT trial_id, trial_index, title, phase
+                        FROM trial_characteristics
+                        WHERE session_id = ? AND is_late_phase = 1
+                    '''
+                
+                cursor.execute(query, (session_id,))
+                matching_trials = cursor.fetchall()
+                
+                for trial in matching_trials:
+                    trial_id = trial[0]
+                    if trial_id not in trial_scores:
+                        trial_scores[trial_id] = {'score': 0, 'reasons': [], 'title': trial[2]}
+                    trial_scores[trial_id]['score'] += 10
+                    trial_scores[trial_id]['reasons'].append(f"Matches phase preference (Phase: {trial[3]})")
+            
+            elif pref_type == 'invasiveness':
+                # SQL QUERY: Find non-invasive trials if preferred
+                if 'avoid' in answer_lower or 'non-invasive' in answer_lower or 'not invasive' in answer_lower:
+                    query = '''
+                        SELECT trial_id, trial_index, title
+                        FROM trial_characteristics
+                        WHERE session_id = ? AND is_invasive = 0
+                    '''
+                    cursor.execute(query, (session_id,))
+                    matching_trials = cursor.fetchall()
+                    
+                    for trial in matching_trials:
+                        trial_id = trial[0]
+                        if trial_id not in trial_scores:
+                            trial_scores[trial_id] = {'score': 0, 'reasons': [], 'title': trial[2]}
+                        trial_scores[trial_id]['score'] += 15
+                        trial_scores[trial_id]['reasons'].append("Non-invasive approach matches preference")
+            
+            elif pref_type == 'priority':
+                # SQL QUERY: Score based on stated priorities
+                if 'safety' in answer_lower:
+                    # Prefer later phase trials for safety
+                    query = '''
+                        SELECT trial_id, trial_index, title, phase_numeric
+                        FROM trial_characteristics
+                        WHERE session_id = ?
+                        ORDER BY phase_numeric DESC
+                    '''
+                    cursor.execute(query, (session_id,))
+                    trials = cursor.fetchall()
+                    
+                    # Give higher scores to higher phase trials
+                    for trial in trials:
+                        trial_id = trial[0]
+                        phase_num = trial[3]
+                        if trial_id not in trial_scores:
+                            trial_scores[trial_id] = {'score': 0, 'reasons': [], 'title': trial[2]}
+                        if phase_num >= 3:
+                            trial_scores[trial_id]['score'] += 8
+                            trial_scores[trial_id]['reasons'].append("Later phase supports safety priority")
+        
+        conn.close()
+        
+        # Find trial with highest score
+        if trial_scores:
+            # Sort trials by score
+            sorted_trials = sorted(trial_scores.items(), key=lambda x: x[1]['score'], reverse=True)
+            best_trial_id = sorted_trials[0][0]
+            best_score = sorted_trials[0][1]['score']
+            
+            # Build detailed scoring breakdown
+            all_scores = []
+            for trial_id, score_data in sorted_trials:
+                all_scores.append({
+                    'trial_id': trial_id,
+                    'title': score_data['title'],
+                    'score': score_data['score'],
+                    'reasons': score_data['reasons']
+                })
+            
+            # Find the best trial in eligible_trials
+            best_trial_data = None
+            for trial_data in eligible_trials:
+                trial_id = trial_data.get('trial', {}).get('trial_info', {}).get('trial_id', '')
+                if trial_id == best_trial_id:
+                    best_trial_data = trial_data
+                    break
+            
+            if best_trial_data:
+                reasoning = f"SQL-based matching score: {best_score} points. " + " ".join(trial_scores[best_trial_id]['reasons'])
+                print(f"✓ SQL Preference Matching: Best trial = {best_trial_id} (Score: {best_score})")
+                
+                return {
+                    'trial': best_trial_data,
+                    'reasoning': reasoning,
+                    'sql_scores': all_scores,  # Include all trial scores
+                    'all_eligible_trials': eligible_trials  # Include all eligible trials for reference
+                }
+        
+        # Fallback if no scoring worked - use first trial
+        return {
+            'trial': eligible_trials[0],
+            'reasoning': 'Based on your preferences, this trial appears to be a good match for you.',
+            'sql_scores': [],
+            'all_eligible_trials': eligible_trials
+        }
+    
+    # =====================================================================
+    # END OF SQL PREFERENCE METHODS
+    # =====================================================================
+    
+    def generate_flexible_recommendation_message(self, recommendation_data: Dict) -> str:
+        """
+        Generate a flexible recommendation message that includes SQL scoring info
+        and invites discussion of other eligible trials.
+        Also stores complete trial profile for detailed Q&A.
+        """
+        trial_data = recommendation_data.get('trial', {})
+        reasoning = recommendation_data.get('reasoning', '')
+        sql_scores = recommendation_data.get('sql_scores', [])
+        all_eligible = recommendation_data.get('all_eligible_trials', [])
+        
+        trial = trial_data.get('trial', {})
+        trial_info = trial.get('trial_info', {})
+        
+        title = trial_info.get('title', 'Unknown Trial')
+        trial_id = trial_info.get('trial_id', 'N/A')
+        
+        # Store complete trial profile for detailed Q&A
+        self.recommended_trial_profile = {
+            'trial_data': trial_data,
+            'trial': trial,
+            'trial_info': trial_info,
+            'inclusion_criteria': trial.get('inclusion_criteria', []),
+            'exclusion_criteria': trial.get('exclusion_criteria', []),
+            'eligibility_reasoning': trial_data.get('reasoning', {}),
+            'sql_scores': sql_scores,
+            'all_eligible_trials': all_eligible
+        }
+        
+        # Start with recommendation
+        message = f"Based on your preferences, I recommend: **{title}**\n\n"
+        
+        # Add trial details
+        message += f"**Trial Details:**\n"
+        message += f"• Trial ID: {trial_id}\n"
+        message += f"• Phase: {trial_info.get('phase', 'Not listed')}\n"
+        
+        diseases = trial_info.get('diseases', [])
+        if diseases:
+            message += f"• Focus: {', '.join(diseases[:3])}\n"
+        
+        interventions = trial_info.get('interventions', [])
+        if interventions:
+            message += f"• Interventions: {', '.join(interventions[:3])}\n"
+        
+        message += f"\n**Learn More:**\n"
+        message += f"Visit ClinicalTrials.gov and search for trial ID: **{trial_id}**\n\n"
+        message += f"Direct link: https://clinicaltrials.gov/study/{trial_id}\n\n"
+        
+        return message
         
     def normalize_variable_name(self, variable_name: str) -> str:
         """Normalize variable names for comparison."""
@@ -627,24 +990,18 @@ Your response (JSON only):"""
             }
     
     def generate_trial_recommendation_message(self, recommended_trial: Dict, reasoning: str) -> str:
-        """Generate final recommendation message with ClinicalTrials.gov link."""
-        trial = recommended_trial.get('trial', {})
-        trial_info = trial.get('trial_info', {})
-        
-        trial_id = trial_info.get('trial_id', 'N/A')
-        title = trial_info.get('title', 'this trial')
-        
-        message = f"""Excellent choice! Based on your preferences and eligibility, **{title}** is a great match for you.
-
-{reasoning}
-
-To learn more about this trial and how to enroll, visit **ClinicalTrials.gov** and search for trial ID: **{trial_id}**
-
-You can also visit this direct link: https://clinicaltrials.gov/study/{trial_id}
-
-Is there anything else you'd like to know about this trial or the other options available to you?"""
-        
-        return message
+        """
+        DEPRECATED: Use generate_flexible_recommendation_message instead.
+        This method kept for backward compatibility.
+        """
+        # Redirect to new flexible message format
+        recommendation_data = {
+            'trial': recommended_trial,
+            'reasoning': reasoning,
+            'sql_scores': getattr(self, 'recommended_trial_profile', {}).get('sql_scores', []),
+            'all_eligible_trials': getattr(self, 'recommended_trial_profile', {}).get('all_eligible_trials', [])
+        }
+        return self.generate_flexible_recommendation_message(recommendation_data)
     
     def detect_conversation_end(self, user_message: str) -> bool:
         """Detect if user is satisfied and ready to end the conversation."""
@@ -715,7 +1072,7 @@ Follow-up questions:"""
     def context_aware_chat(self, user_message: str, conversation_context: Dict) -> str:
         """
         Handle user questions intelligently based on conversation context.
-        Provides accurate information about trials, treatments, diseases, etc.
+        Provides accurate information about trials, treatments, diseases, SQL scores, etc.
         """
         # Build context based on conversation state
         context_info = []
@@ -748,11 +1105,48 @@ Current Trial Being Reviewed:
 """)
         
         elif current_state in ['post_recommendation', 'gathering_preferences']:
-            # User is in preference/recommendation phase - provide eligible trials info
-            eligible_trials = conversation_context.get('eligible_trials', [])
+            # User is in preference/recommendation phase - provide comprehensive info
             
-            if eligible_trials:
-                trials_summary = "Eligible Trials:\n"
+            # If we have a stored recommended trial profile, use it for detailed Q&A
+            if self.recommended_trial_profile:
+                profile = self.recommended_trial_profile
+                trial_info = profile['trial_info']
+                
+                context_info.append(f"""
+Recommended Trial (Complete Profile):
+- Title: {trial_info.get('title', 'N/A')}
+- Trial ID: {trial_info.get('trial_id', 'N/A')}
+- Phase: {trial_info.get('phase', 'Not listed')}
+- Focus Areas: {', '.join(trial_info.get('diseases', []))}
+- Interventions: {', '.join(trial_info.get('interventions', []))}
+- Brief Summary: {trial_info.get('brief_summary', 'N/A')}
+- Detailed Summary: {trial_info.get('detailed_description', 'N/A')}
+
+Inclusion Criteria:
+{chr(10).join(['- ' + str(c) for c in profile['inclusion_criteria'][:10]])}
+
+Exclusion Criteria:
+{chr(10).join(['- ' + str(c) for c in profile['exclusion_criteria'][:10]])}
+
+Eligibility Reasoning:
+- Patient meets {profile['eligibility_reasoning'].get('inclusion_criteria', {}).get('met', 0)} of {profile['eligibility_reasoning'].get('inclusion_criteria', {}).get('total', 0)} inclusion criteria
+- Patient violates {profile['eligibility_reasoning'].get('exclusion_criteria', {}).get('violated', 0)} of {profile['eligibility_reasoning'].get('exclusion_criteria', {}).get('total', 0)} exclusion criteria
+""")
+            
+            # Also include SQL scores if available
+            sql_scores = conversation_context.get('sql_scores', [])
+            if sql_scores:
+                scores_text = "\nSQL Preference Matching Scores:\n"
+                for i, score_info in enumerate(sql_scores, 1):
+                    scores_text += f"{i}. {score_info['title'][:60]} - {score_info['score']} points\n"
+                    if score_info['reasons']:
+                        scores_text += f"   Reasons: {', '.join(score_info['reasons'])}\n"
+                context_info.append(scores_text)
+            
+            # Include all eligible trials for comparison
+            eligible_trials = conversation_context.get('eligible_trials', [])
+            if eligible_trials and len(eligible_trials) > 1:
+                trials_summary = "\nAll Eligible Trials for Comparison:\n"
                 for i, trial_data in enumerate(eligible_trials, 1):
                     trial = trial_data.get('trial', {})
                     trial_info = trial.get('trial_info', {})
@@ -760,8 +1154,7 @@ Current Trial Being Reviewed:
 {i}. {trial_info.get('title', 'N/A')}
    - Trial ID: {trial_info.get('trial_id', 'N/A')}
    - Phase: {trial_info.get('phase', 'Not listed')}
-   - Focus Areas: {', '.join(trial_info.get('diseases', []))}
-   - Summary: {trial_info.get('brief_summary', 'N/A')[:200]}...
+   - Focus: {', '.join(trial_info.get('diseases', []))}
 """
                 context_info.append(trials_summary)
         
@@ -799,11 +1192,16 @@ PATIENT QUESTION:
 
 INSTRUCTIONS:
 - Answer the patient's question accurately using the context provided
-- If asked about specific trials, diseases, or treatments, provide detailed information from the trial data
+- For questions about inclusion/exclusion criteria, list them clearly and explain why the patient meets or doesn't meet them
+- For questions about treatments/interventions, describe them from the trial information
+- For questions about trial details (phase, summary, diseases), provide comprehensive information
+- For questions comparing trials or asking about SQL scores, explain the scoring rationale
+- If asked "why am I eligible?", explain which inclusion criteria they meet and which exclusions they don't violate
 - If the information isn't in the context, say so honestly and offer to help with what you do know
 - Be empathetic, supportive, and clear
-- Keep responses concise but informative (2-4 paragraphs)
-- After answering, gently guide them back to the main flow if appropriate (e.g., "Would you like to continue reviewing trials?" or "Does this help you with your decision?")
+- Keep responses concise but informative (2-4 paragraphs for simple questions, more detail for complex ones)
+- Format lists with bullet points for readability
+- After answering, ask if they have any other questions about the trial or would like to proceed
 
 Your response:"""
         
@@ -1170,7 +1568,7 @@ Provide a warm, helpful, and informative response. Be empathetic and encouraging
         """Help user select the best trial through conversation."""
         print("\nAgent: I'd love to help you find the trial that best fits your needs and circumstances.")
         print("Please feel free to ask me questions about any of these trials, or let me know what matters most to you")
-        print("(for example: location, trial phase, specific treatments, time commitment, etc.)\n")
+        print("(for example: trial phase, specific treatments, time commitment, etc.)\n")
         print("Type 'done' when you've made your decision, or 'exit' if you'd like to end our consultation.\n")
         
         while True:

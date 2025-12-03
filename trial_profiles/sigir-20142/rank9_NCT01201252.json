@@ -22,7 +22,6 @@
     "patient_has_diagnosis_of_acute_gastroenteritis_now"
   ],
   "exclusion_criteria": [
-    "patient_has_diagnosis_of_acute_gastroenteritis_now",
-    "patient_has_finding_of_acute_gastroenteritis_now"
+    "patient_has_diagnosis_of_acute_gastroenteritis_now"
   ]
 }
