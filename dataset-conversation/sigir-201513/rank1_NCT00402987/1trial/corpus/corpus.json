@@ -1,0 +1,24 @@
+{
+  "_id": "NCT00402987",
+  "title": "Testing The Effectiveness Of Celecoxib In Patients With Painful Sore Throat",
+  "text": "Summary: We are proposing a study in which we utilize and augment the sore throat pain model to assess the analgesic effectiveness of celecoxib compared to placebo in patients with painful pharyngitis under randomized, double-blind, placebo-controlled conditions.\nInclusion criteria: inclusion criteria: \n\n The patient must have a diagnosis of pharyngitis with objective findings of tonsillo-pharyngitis. \n\n The patient is willing to take nothing by mouth including inhaled treatments except trial medication during the two hours while at the site and following trial drug administration (e.g. not smoking, food, drink, candy, lozenges, chewing gum). The patient will be allowed food and drink between hours 2 and 24, but no other oral or inhaled treatments such as smoking, lozenges, chewing gum. After the two hour assessment, the patients will be allowed food and drink within one half-hour following any hourly evaluations sore throat. \n\n \nExclusion criteria: : \n\n The patient has used any analgesic/antipyretic within 1 dosing interval preceding administration of the first dose of trial medication. \n\n The patient anticipates using any inhaled therapy including beta-agonists (e.g., ventolin) during the 24 hour trial period and, if used, has only used inhaled therapy on an intermittent basis in the week prior to the screening visit.",
+  "metadata": {
+    "brief_title": "Testing The Effectiveness Of Celecoxib In Patients With Painful Sore Throat",
+    "phase": "Phase 3",
+    "drugs": "['Celecoxib', 'Celecoxib', 'celecoxib', 'placebo']",
+    "drugs_list": [
+      "Celecoxib",
+      "Celecoxib",
+      "celecoxib",
+      "placebo"
+    ],
+    "diseases": "['Pharyngitis']",
+    "diseases_list": [
+      "Pharyngitis"
+    ],
+    "enrollment": "269.0",
+    "inclusion_criteria": "inclusion criteria: \n\n The patient must have a diagnosis of pharyngitis with objective findings of tonsillo-pharyngitis. \n\n The patient is willing to take nothing by mouth including inhaled treatments except trial medication during the two hours while at the site and following trial drug administration (e.g. not smoking, food, drink, candy, lozenges, chewing gum). The patient will be allowed food and drink between hours 2 and 24, but no other oral or inhaled treatments such as smoking, lozenges, chewing gum. After the two hour assessment, the patients will be allowed food and drink within one half-hour following any hourly evaluations sore throat. \n\n ",
+    "exclusion_criteria": ": \n\n The patient has used any analgesic/antipyretic within 1 dosing interval preceding administration of the first dose of trial medication. \n\n The patient anticipates using any inhaled therapy including beta-agonists (e.g., ventolin) during the 24 hour trial period and, if used, has only used inhaled therapy on an intermittent basis in the week prior to the screening visit.",
+    "brief_summary": "We are proposing a study in which we utilize and augment the sore throat pain model to assess the analgesic effectiveness of celecoxib compared to placebo in patients with painful pharyngitis under randomized, double-blind, placebo-controlled conditions."
+  }
+}

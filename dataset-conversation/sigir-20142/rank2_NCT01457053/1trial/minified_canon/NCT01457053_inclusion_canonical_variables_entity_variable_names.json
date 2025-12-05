@@ -1,0 +1,18 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_decompensated_cardiac_failure_now",
+  "patient_has_diagnosis_of_heart_failure_now",
+  "patient_is_undergoing_hospital_admission_now",
+  "patient_has_finding_of_ascites_now",
+  "patient_has_finding_of_hypervolemia_now",
+  "patient_hypervolemia_value_recorded_now_withunit_kilograms",
+  "patient_jugular_venous_pressure_value_recorded_now_withunit_centimeters_water",
+  "patient_orthopnea_value_recorded_now_withunit_pillows",
+  "patient_has_finding_of_paroxysmal_nocturnal_dyspnea_now",
+  "patient_pitting_edema_value_recorded_now_withunit_plus",
+  "patient_has_finding_of_pleural_effusion_now",
+  "patient_has_finding_of_pulmonary_edema_now"
+]

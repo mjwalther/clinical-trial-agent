@@ -1,0 +1,44 @@
+{
+  "patient_id": "sigir-201524",
+  "rank_folder": "rank9_NCT00462241",
+  "trial_info": {
+    "trial_id": "NCT00462241",
+    "title": "Treatment Study Comparing Manual Treatment or Advice in Acute, Musculoskeletal Chest Pain",
+    "brief_summary": "Acute chest pain is a common cause of hospital admission. Active approaches are directed towards diagnosis and treatment of potentially life threatening conditions, especially acute coronary syndrome and coronary artery disease. However, a considerable number of patients may have chest pain caused by biomechanical dysfunction of muscles and joints of the chest wall or the cervical and thoracic spine (20%). The diagnostic approaches and treatment options for this group of patients are scarce and there is a lack of formal clinical studies and validated outcome measures addressing the effect of manual treatment approaches.~Objective: This single blind randomized clinical trial investigates whether chiropractic treatment can reduce pain and improve function in a population of patients with acute, musculoskeletal chest pain when compared to advice directed towards promoting self-management.~Methods: Among patients admitted to a chest pain clinic in a university hospital under suspicion of acute coronary syndrome, 120 patients with an episode of acute chest pain of musculoskeletal origin are included in the study. All patients have completed the chest pain clinic diagnostic procedures, and acute coronary syndrome and other obvious reasons for chest pain have been excluded. After completion of the study evaluation program, the patients are randomized into one of two groups: A) advice promoting self-management and individual instructions focusing on posture and muscle stretch; B) a course of chiropractic therapy of up to ten treatment sessions focusing on high velocity, low amplitude manipulation of the cervical and thoracic spine together with a choice of mobilisation and soft tissue techniques. In order to establish suitable outcome measures, two pilot studies were conducted. Outcome measures are pain, function, overall health, and patient-rated treatment effect measured at 4, 12, and 52 weeks following treatment.",
+    "phase": "",
+    "drugs": [
+      "chiropractic treatment",
+      "Self-management"
+    ],
+    "diseases": [
+      "Musculoskeletal Chest Pain",
+      "Non-cardiac Chest Pain",
+      "Undiagnosed Chest Pain"
+    ],
+    "enrollment": "115.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_finding_of_chest_pain_now",
+    "patient_has_finding_of_acute_pain_now",
+    "patient_has_finding_of_neck_pain_now",
+    "patient_age_value_recorded_now_in_years"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_acute_coronary_syndrome_now",
+    "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+    "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+    "patient_has_finding_of_dissection_of_aorta_now",
+    "patient_has_finding_of_pneumonia_now",
+    "patient_has_finding_of_pulmonary_embolism_now",
+    "patient_has_finding_of_arthropathy_now",
+    "patient_has_diagnosis_of_arthropathy_now",
+    "patient_has_finding_of_type_1_diabetes_mellitus_now",
+    "patient_has_finding_of_fibromyalgia_now",
+    "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+    "patient_has_finding_of_dementia_now",
+    "patient_has_finding_of_osteoporosis_now",
+    "patient_is_pregnant_now",
+    "patient_has_undergone_ct_angiography_now_outcome_is_negative",
+    "patient_has_finding_of_pain_now"
+  ]
+}

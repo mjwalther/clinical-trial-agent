@@ -1,0 +1,30 @@
+{
+  "patient_id": "sigir-20148",
+  "rank_folder": "rank8_NCT00397891",
+  "trial_info": {
+    "trial_id": "NCT00397891",
+    "title": "Study Evaluating Single Ascending Doses of AAB-001 Vaccine SAD Japanese Patients With Alzheimers Disease",
+    "brief_summary": "Evaluate safety, tolerability, and pharmacokinetics of single doses of the investigational AAB-001 Vaccine in Japanese patients with Alzheimer's disease.",
+    "phase": "Phase 1",
+    "drugs": [
+      "bapineuzumab",
+      "bapineuzumab",
+      "bapineuzumab"
+    ],
+    "diseases": [
+      "Alzheimer Disease"
+    ],
+    "enrollment": "80.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_alzheimer_s_disease_now",
+    "patient_age_value_recorded_now_in_years",
+    "patient_mini_mental_state_examination_score_value_recorded_now_withunit_score"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_disorder_of_nervous_system_now",
+    "patient_has_finding_of_mental_disorder_now",
+    "patient_has_finding_of_systemic_disease_now",
+    "patient_has_finding_of_disease_condition_finding_now"
+  ]
+}

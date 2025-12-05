@@ -1,0 +1,25 @@
+{
+  "patient_id": "sigir-201417",
+  "rank_folder": "rank5_NCT00974337",
+  "trial_info": {
+    "trial_id": "NCT00974337",
+    "title": "Relative Adrenal Insufficiency in Preterm Very Low Birth Weight Infants With Shock",
+    "brief_summary": "The objective of this study is to estimate the prevalence of relative adrenal insufficiency in preterm very low birth weight infants with and without shock.",
+    "phase": "",
+    "drugs": [],
+    "diseases": [
+      "Adrenal Insufficiency"
+    ],
+    "enrollment": "39.0"
+  },
+  "inclusion_criteria": [
+    "patient_age_value_recorded_now_in_years",
+    "patient_birth_weight_value_recorded_now_withunit_grams",
+    "patient_has_finding_of_shock_inthepast1weeks"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_congenital_malformation_now",
+    "patient_is_undergoing_anticonvulsant_therapy_now",
+    "patient_is_undergoing_tb_chemotherapy_now"
+  ]
+}

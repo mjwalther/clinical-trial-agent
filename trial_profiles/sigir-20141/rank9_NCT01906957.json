@@ -1,0 +1,40 @@
+{
+  "patient_id": "sigir-20141",
+  "rank_folder": "rank9_NCT01906957",
+  "trial_info": {
+    "trial_id": "NCT01906957",
+    "title": "Cognition and Exercise Training",
+    "brief_summary": "The aim of study is to investigate the impact of two different training modalities (high intensity interval training (HIIT) versus moderate intensity continuous exercise training (MICET) on cognitive performance, cerebral oxygenation, cardiac output and physical fitness in older healthy adults, patients with metabolic syndrome, coronary heart disease and heart failure. The investigators hypothesized that HIIT modality will lead to a larger improvement in physical fitness (i.e. VO2peak), cardiovascular parameters (cardiac output and stroke volume) and cognitive performance at rest and during submaximal exercise. The primary endpoint will be the improvement in cognitive performance.",
+    "phase": "",
+    "drugs": [
+      "high intensity interval training (HIIT)",
+      "moderate intensity continuous exercise training"
+    ],
+    "diseases": [
+      "Metabolic Syndrome",
+      "Coronary Heart Disease",
+      "Chronic Heart Failure"
+    ],
+    "enrollment": "6.0"
+  },
+  "inclusion_criteria": [
+    "patient_sex_is_male_now",
+    "patient_sex_is_female_now",
+    "patient_age_value_recorded_now_in_years",
+    "patients_intellectual_ability_is_normal_now",
+    "patient_has_undergone_coronary_angiography_inthehistory",
+    "patient_has_undergone_coronary_angioplasty_inthehistory",
+    "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+    "patient_has_finding_of_myocardial_ischemia_inthehistory"
+  ],
+  "exclusion_criteria": [
+    "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+    "patient_has_diagnosis_of_chronic_systolic_heart_failure_now",
+    "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+    "patient_has_diagnosis_of_aortic_valve_stenosis_now",
+    "patient_has_finding_of_left_main_coronary_artery_disease_now",
+    "patient_will_undergo_coronary_artery_bypass_graft_now",
+    "patient_has_diagnosis_of_chronic_atrial_fibrillation_now",
+    "patient_has_finding_of_impaired_exercise_tolerance_now"
+  ]
+}

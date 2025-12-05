@@ -1,0 +1,12 @@
+[
+  "patient_is_exposed_to_steroid_inthepast4weeks",
+  "patient_is_exposed_to_steroid_now",
+  "patient_has_finding_of_respiratory_tract_infection_inthehistory",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthehistory",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now"
+]

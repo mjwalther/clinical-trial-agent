@@ -1,0 +1,22 @@
+{
+  "_id": "NCT00042588",
+  "title": "A Safety and Efficacy Study of Hospitalized Patients With Community-Acquired Pneumonia and Sepsis",
+  "text": "Summary: The objective of this study is to demonstrate the safety and efficacy of IC14 in the treatment of hospitalized patients with community-acquired pneumonia and sepsis.\nInclusion criteria: inclusion criteria: \n\n Current diagnosis of community-acquired pneumonia. \n\n Evidence of systemic inflammatory response to infection. \n\n \nExclusion criteria: : \n\n Atypical or viral pneumonia based on clinical or epidemiologic suspicion by the investigator. \n\n Presence of organ failure.",
+  "metadata": {
+    "brief_title": "A Safety and Efficacy Study of Hospitalized Patients With Community-Acquired Pneumonia and Sepsis",
+    "phase": "Phase 2",
+    "drugs": "['Recombinant Chimeric Monoclonal Antibody']",
+    "drugs_list": [
+      "Recombinant Chimeric Monoclonal Antibody"
+    ],
+    "diseases": "['Pneumonia', 'Sepsis']",
+    "diseases_list": [
+      "Pneumonia",
+      "Sepsis"
+    ],
+    "enrollment": "",
+    "inclusion_criteria": "inclusion criteria: \n\n Current diagnosis of community-acquired pneumonia. \n\n Evidence of systemic inflammatory response to infection. \n\n ",
+    "exclusion_criteria": ": \n\n Atypical or viral pneumonia based on clinical or epidemiologic suspicion by the investigator. \n\n Presence of organ failure.",
+    "brief_summary": "The objective of this study is to demonstrate the safety and efficacy of IC14 in the treatment of hospitalized patients with community-acquired pneumonia and sepsis."
+  }
+}

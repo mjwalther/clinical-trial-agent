@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_has_finding_of_general_pathology_now",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_finding_of_disability_affecting_daily_living_now",
+  "patient_has_finding_of_impaired_cognition_now",
+  "patient_has_finding_of_memory_impairment_now",
+  "patient_has_diagnosis_of_mild_cognitive_disorder_now",
+  "patient_has_diagnosis_of_neoplasm_of_brain_now",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_has_finding_of_alcohol_dependence_inthehistory",
+  "patient_has_finding_of_alcohol_dependence_now",
+  "patient_has_finding_of_psychoactive_substance_dependence_inthehistory",
+  "patient_has_finding_of_psychoactive_substance_dependence_now",
+  "patient_is_pregnant_now"
+]

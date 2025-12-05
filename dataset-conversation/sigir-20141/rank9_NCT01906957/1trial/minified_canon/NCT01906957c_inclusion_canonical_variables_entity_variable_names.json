@@ -1,0 +1,10 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patients_intellectual_ability_is_normal_now",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_undergone_coronary_angioplasty_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_myocardial_ischemia_inthehistory"
+]

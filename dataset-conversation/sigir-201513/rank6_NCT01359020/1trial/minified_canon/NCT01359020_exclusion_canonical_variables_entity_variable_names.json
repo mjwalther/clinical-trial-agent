@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_general_health_poor_now",
+  "patient_has_finding_of_febrile_convulsion_inthehistory",
+  "patient_has_diagnosis_of_gastrointestinal_hemorrhage_now",
+  "patient_has_diagnosis_of_neoplastic_disease_now",
+  "patient_has_diagnosis_of_peptic_ulcer_now",
+  "patient_has_intolerance_to_acetaminophen_now",
+  "patient_has_intolerance_to_dipyrone_now",
+  "patient_has_intolerance_to_ibuprofen_now",
+  "patient_has_intolerance_to_non_steroidal_anti_inflammatory_agent_now",
+  "patient_has_finding_of_moderate_dehydration_now",
+  "patient_has_finding_of_severe_dehydration_now",
+  "patient_has_finding_of_disturbance_of_consciousness_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_taking_steroid_containing_product_now",
+  "patient_is_exposed_to_drug_or_medicament_inthehistory",
+  "patient_is_exposed_to_analgesic_inthepast6hours"
+]

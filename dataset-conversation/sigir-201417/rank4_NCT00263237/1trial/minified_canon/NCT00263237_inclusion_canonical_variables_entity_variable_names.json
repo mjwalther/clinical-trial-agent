@@ -1,0 +1,18 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_common_variable_agammaglobulinemia_inthehistory",
+  "patient_has_finding_of_chronic_diarrhea_now",
+  "patient_fat_value_recorded_now_withunit_grams",
+  "patient_feces_value_recorded_now_withunit_grams_per_24_hours",
+  "patient_has_finding_of_liquid_stool_inthepast4weeks",
+  "patient_is_taking_nutritional_supplement_now",
+  "patient_has_finding_of_weight_decreased_inthepast12months",
+  "patient_fat_value_recorded_now_withunit_grams_per_day",
+  "patient_is_taking_antifungal_now",
+  "patient_is_exposed_to_grapefruit_juice_now",
+  "patient_is_taking_hypericum_perforatum_extract_now",
+  "patient_is_taking_macrolide_antibacterial_now",
+  "patient_is_taking_protease_inhibitor_now"
+]

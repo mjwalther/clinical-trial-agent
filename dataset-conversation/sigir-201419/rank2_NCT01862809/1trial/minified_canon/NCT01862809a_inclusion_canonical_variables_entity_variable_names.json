@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_smoker_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_exposed_to_chewing_tobacco_inthehistory",
+  "patient_is_exposed_to_chewing_tobacco_inthepast6months",
+  "patient_is_exposed_to_cigar_smoking_tobacco_inthehistory",
+  "patient_is_exposed_to_cigar_smoking_tobacco_inthepast6months",
+  "patient_is_exposed_to_pipe_smoking_tobacco_inthehistory",
+  "patient_is_exposed_to_pipe_smoking_tobacco_inthepast6months",
+  "patient_is_exposed_to_snuff_tobacco_inthehistory",
+  "patient_is_exposed_to_snuff_tobacco_inthepast6months",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now"
+]

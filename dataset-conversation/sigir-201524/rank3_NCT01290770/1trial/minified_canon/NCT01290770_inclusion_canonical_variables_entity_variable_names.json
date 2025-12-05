@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_finding_of_obesity_now",
+  "patient_has_undergone_aspirin_therapy_inthehistory",
+  "patient_has_finding_of_chest_pain_now"
+]

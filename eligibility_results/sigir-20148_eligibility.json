@@ -1,0 +1,720 @@
+{
+  "patient_id": "sigir-20148",
+  "patient_summary": "A 62-year-old man sees a neurologist for progressive memory loss and jerking movements of the lower extremities. Neurologic examination confirms severe cognitive deficits and memory dysfunction. An electroencephalogram shows generalized periodic sharp waves. Neuroimaging studies show moderately advanced cerebral atrophy. A cortical biopsy shows diffuse vacuolar changes of the gray matter with reactive astrocytosis but no inflammatory infiltration.",
+  "trials_evaluated": [
+    {
+      "rank": "rank10_NCT01329484",
+      "trial_id": "NCT01329484",
+      "title": "Computerized Personal Interventions for Alzheimer's Patients",
+      "phase": "",
+      "drugs": [
+        "Reminiscence therapy",
+        "Cognitive training",
+        "No treatment"
+      ],
+      "diseases": [
+        "Alzheimer's Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 3,
+          "satisfied": 2,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_visual_impairment_now",
+                "normalized": "patient_has_finding_of_visual_impairment",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_auditory_dysfunction_now",
+                "normalized": "patient_has_finding_of_auditory_dysfunction",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_mental_disorder_now",
+                "normalized": "patient_has_diagnosis_of_mental_disorder",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_mental_disorder",
+                    "preferred_term": null,
+                    "conceptId": "74732009",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank1_NCT00880347",
+      "trial_id": "NCT00880347",
+      "title": "Blood Gene Expression Signature in Patients Diagnosed With Probable Alzheimer's Disease Compared to Patients Suffering From Other Types of Dementia",
+      "phase": "",
+      "drugs": [
+        "Blood sampling"
+      ],
+      "diseases": [
+        "Alzheimer's Disease",
+        "Dementia"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 18,
+          "satisfied": 15,
+          "violated": 3,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_disease_condition_finding_now",
+                "normalized": "patient_has_finding_of_disease_condition_finding",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_inthehistory",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_now",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_dependence_inthehistory",
+                "normalized": "patient_has_finding_of_alcohol_dependence",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_dependence_now",
+                "normalized": "patient_has_finding_of_alcohol_dependence",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthehistory",
+                "normalized": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now",
+                "normalized": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_psychoactive_substance_dependence_inthehistory",
+                "normalized": "patient_has_finding_of_psychoactive_substance_dependence",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_psychoactive_substance_dependence_now",
+                "normalized": "patient_has_finding_of_psychoactive_substance_dependence",
+                "patient_has": false
+              },
+              {
+                "criterion": "patients_activity_of_daily_living_is_abnormal_now",
+                "normalized": "patients_activity_of_daily_living_is_abnormal",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_mild_cognitive_disorder_now",
+                "normalized": "patient_has_diagnosis_of_mild_cognitive_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_pathology_now",
+                "normalized": "patient_has_finding_of_pathology",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_collection_of_blood_specimen_for_laboratory_now",
+                "normalized": "patient_is_undergoing_collection_of_blood_specimen_for_laboratory",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_pharmaceutical_biologic_product_now",
+                "normalized": "patient_is_taking_pharmaceutical_biologic_product",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_alzheimer_s_disease_now",
+                "normalized": "patient_has_diagnosis_of_alzheimer_s_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_alzheimer_s_disease",
+                    "preferred_term": "Alzheimer's disease",
+                    "conceptId": "26929004",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_impaired_cognition_now",
+                "normalized": "patient_has_finding_of_impaired_cognition",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_impaired_cognition",
+                    "preferred_term": "Impaired cognition",
+                    "conceptId": "386806002",
+                    "fact_id": "fact002"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_memory_impairment_now",
+                "normalized": "patient_has_finding_of_memory_impairment",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_memory_impairment",
+                    "preferred_term": "Memory impairment",
+                    "conceptId": "386807006",
+                    "fact_id": "fact002"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 3 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank2_NCT02120664",
+      "trial_id": "NCT02120664",
+      "title": "Florbetapir Calibration to the Centiloid Scale",
+      "phase": "Phase 1",
+      "drugs": [
+        "Florbetapir (18F)",
+        "11C-PiB"
+      ],
+      "diseases": [
+        "Alzheimer's Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 13,
+          "satisfied": 10,
+          "violated": 3,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_illness_now",
+                "normalized": "patient_has_finding_of_illness",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_lesion_of_brain_now",
+                "normalized": "patient_has_finding_of_lesion_of_brain",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_traumatic_brain_injury_now",
+                "normalized": "patient_has_finding_of_traumatic_brain_injury",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_drug_or_medicament_inthepast30days",
+                "normalized": "patient_is_exposed_to_drug_or_medicament",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_administration_of_radiopharmaceutical_inthehistory",
+                "normalized": "patient_has_undergone_administration_of_radiopharmaceutical",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_nuclear_medicine_imaging_procedure_inthehistory",
+                "normalized": "patient_has_undergone_nuclear_medicine_imaging_procedure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_sex_is_female_now",
+                "normalized": "patient_sex_is_female",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_childbearing_potential_now",
+                "normalized": "patient_has_childbearing_potential",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_contraception_now",
+                "normalized": "patient_has_finding_of_contraception",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_sterility_now",
+                "normalized": "patient_has_finding_of_sterility",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_degenerative_brain_disorder_inthehistory",
+                "normalized": "patient_has_diagnosis_of_degenerative_brain_disorder",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_degenerative_brain_disorder",
+                    "preferred_term": null,
+                    "conceptId": "52522001",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_degenerative_brain_disorder_now",
+                "normalized": "patient_has_diagnosis_of_degenerative_brain_disorder",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_degenerative_brain_disorder",
+                    "preferred_term": null,
+                    "conceptId": "52522001",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_of_brain_now",
+                "normalized": "patient_has_finding_of_disorder_of_brain",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_disorder_of_brain",
+                    "preferred_term": null,
+                    "conceptId": "81308009",
+                    "fact_id": "fact004"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 3 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank3_NCT00104663",
+      "trial_id": "NCT00104663",
+      "title": "PRION-1: Quinacrine for Human Prion Disease",
+      "phase": "",
+      "drugs": [
+        "Quinacrine"
+      ],
+      "diseases": [
+        "Prion Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 3,
+          "satisfied": 2,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_coma_now",
+                "normalized": "patient_has_finding_of_coma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergy_to_quinacrine_now",
+                "normalized": "patient_has_finding_of_allergy_to_quinacrine",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_disease_now",
+                "normalized": "patient_has_finding_of_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_disease",
+                    "preferred_term": null,
+                    "conceptId": "64572001",
+                    "fact_id": "fact004"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank4_NCT00246896",
+      "trial_id": "NCT00246896",
+      "title": "Care Management for Patients With Alzheimer Disease and Their Family Caregivers",
+      "phase": "",
+      "drugs": [
+        "care management"
+      ],
+      "diseases": [
+        "Alzheimer's Disease",
+        "Dementia"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 1,
+          "satisfied": 1,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_akatamathesia_now",
+                "normalized": "patient_has_finding_of_akatamathesia",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank5_NCT00297271",
+      "trial_id": "NCT00297271",
+      "title": "Prospective Research in Memory Clinics (PRIME)",
+      "phase": "",
+      "drugs": [
+        "Current treatment practice of each participating physician"
+      ],
+      "diseases": [
+        "Dementia",
+        "Mild Cognitive Impairment"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 0,
+          "satisfied": 0,
+          "violated": 0,
+          "details": {
+            "satisfied": [],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 0 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank6_NCT00306124",
+      "trial_id": "NCT00306124",
+      "title": "Dopaminergic Enhancement of Learning and Memory in Healthy Adults and Patients With Dementia/Mild Cognitive Impairment",
+      "phase": "Phase 4",
+      "drugs": [
+        "Levodopa"
+      ],
+      "diseases": [
+        "Healthy",
+        "Alzheimer's Disease",
+        "Mild Cognitive Impairment"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 18,
+          "satisfied": 18,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_allergy_to_levodopa_now",
+                "normalized": "patient_has_finding_of_allergy_to_levodopa",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_tetrazine_now",
+                "normalized": "patient_has_allergy_to_tetrazine",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthehistory",
+                "normalized": "patient_has_finding_of_finding_relating_to_drug_misuse_behavior",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_nicotine_withdrawal_now",
+                "normalized": "patient_has_finding_of_nicotine_withdrawal",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_tobacco_smoking_behavior_finding_value_recorded_now_withunit_cigarettes_per_day",
+                "normalized": "patient_tobacco_smoking_behavior_finding_value_recorded_now_withunit_cigarettes_per_day",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_coffee_value_recorded_now_withunit_cups_per_day",
+                "normalized": "patient_coffee_value_recorded_now_withunit_cups_per_day",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_coffee_value_recorded_now_withunit_glasses_per_day",
+                "normalized": "patient_coffee_value_recorded_now_withunit_glasses_per_day",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_alcohol_value_recorded_now_withunit_grams",
+                "normalized": "patient_alcohol_value_recorded_now_withunit_grams",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_increased_muscle_tone_now",
+                "normalized": "patient_has_finding_of_increased_muscle_tone",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+                "normalized": "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_now",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_diabetes_mellitus_now",
+                "normalized": "patient_has_diagnosis_of_diabetes_mellitus",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_glaucoma_now",
+                "normalized": "patient_has_diagnosis_of_glaucoma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_severe_hearing_loss_now",
+                "normalized": "patient_has_finding_of_severe_hearing_loss",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_lesion_of_brain_now",
+                "normalized": "patient_has_finding_of_lesion_of_brain",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_dopamine_receptor_agonist_containing_product_now",
+                "normalized": "patient_is_taking_dopamine_receptor_agonist_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_dopamine_receptor_antagonist_containing_product_now",
+                "normalized": "patient_is_taking_dopamine_receptor_antagonist_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_parkinsonian_features_now",
+                "normalized": "patient_has_finding_of_parkinsonian_features",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 18 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank7_NCT00391833",
+      "trial_id": "NCT00391833",
+      "title": "Effect of Panax Ginseng on the Cognitive Performance in Alzheimer's Disease",
+      "phase": "Phase 1; Phase 2",
+      "drugs": [
+        "Panax Ginseng"
+      ],
+      "diseases": [
+        "Alzheimer's Disease",
+        "Memory Decline"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 1,
+          "satisfied": 0,
+          "violated": 1,
+          "details": {
+            "satisfied": [],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_disorder_of_nervous_system_now",
+                "normalized": "patient_has_diagnosis_of_disorder_of_nervous_system",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_disorder_of_nervous_system",
+                    "preferred_term": null,
+                    "conceptId": "118940003",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank8_NCT00397891",
+      "trial_id": "NCT00397891",
+      "title": "Study Evaluating Single Ascending Doses of AAB-001 Vaccine SAD Japanese Patients With Alzheimers Disease",
+      "phase": "Phase 1",
+      "drugs": [
+        "bapineuzumab",
+        "bapineuzumab",
+        "bapineuzumab"
+      ],
+      "diseases": [
+        "Alzheimer Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 4,
+          "satisfied": 2,
+          "violated": 2,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_systemic_disease_now",
+                "normalized": "patient_has_finding_of_systemic_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_condition_finding_now",
+                "normalized": "patient_has_finding_of_disease_condition_finding",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_disorder_of_nervous_system_now",
+                "normalized": "patient_has_finding_of_disorder_of_nervous_system",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_disorder_of_nervous_system",
+                    "preferred_term": null,
+                    "conceptId": "118940003",
+                    "fact_id": "fact004"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_mental_disorder_now",
+                "normalized": "patient_has_finding_of_mental_disorder",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_mental_disorder",
+                    "preferred_term": null,
+                    "conceptId": "74732009",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 2 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank9_NCT00814502",
+      "trial_id": "NCT00814502",
+      "title": "Zolpidem CR and Hospitalized Patients With Dementia",
+      "phase": "",
+      "drugs": [
+        "Zolpidem CR",
+        "Placebo"
+      ],
+      "diseases": [
+        "Dementia",
+        "Alzheimer Disease",
+        "Dementia",
+        "Vascular",
+        "Sleep Disorders",
+        "Circadian Dysregulation"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 7,
+          "satisfied": 7,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_feeling_agitated_now",
+                "normalized": "patient_has_finding_of_feeling_agitated",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_sleep_disorder_now",
+                "normalized": "patient_has_finding_of_sleep_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_hypnotic_agent_inthehistory",
+                "normalized": "patient_is_exposed_to_hypnotic_agent",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_hypnotic_agent_now",
+                "normalized": "patient_is_exposed_to_hypnotic_agent",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_finding_relating_to_alcohol_drinking_behavior_now",
+                "normalized": "patient_has_finding_of_finding_relating_to_alcohol_drinking_behavior",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_anaphylaxis_inthehistory",
+                "normalized": "patient_has_finding_of_anaphylaxis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_angioedema_inthehistory",
+                "normalized": "patient_has_finding_of_angioedema",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 7 exclusion criteria violated."
+      }
+    }
+  ],
+  "summary": {
+    "total_trials": 10,
+    "eligible_trials": 4,
+    "ineligible_trials": 6
+  }
+}

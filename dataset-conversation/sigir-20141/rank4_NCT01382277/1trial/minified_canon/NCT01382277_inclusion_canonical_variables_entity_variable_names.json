@@ -1,0 +1,17 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_coronary_artery_stenosis_value_recorded_inthehistory_withunit_percent",
+  "patient_has_undergone_electrocardiogram_with_exercise_test_inthehistory_outcome_is_abnormal",
+  "patient_has_undergone_electrocardiogram_with_exercise_test_inthehistory_outcome_is_positive",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_stable_angina_now",
+  "patient_has_undergone_coronary_angiography_inthehistory_outcome_is_positive",
+  "patient_coronary_artery_stenosis_value_recorded_now_withunit_percent",
+  "patient_has_diagnosis_of_hyperlipidemia_now",
+  "patient_ldl_cholesterol_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_undergone_lipid_lowering_therapy_inthehistory",
+  "patient_finding_of_lesion_value_recorded_now_withunit_mm"
+]

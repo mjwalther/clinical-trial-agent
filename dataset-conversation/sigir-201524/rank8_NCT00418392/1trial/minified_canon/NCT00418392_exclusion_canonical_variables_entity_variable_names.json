@@ -1,0 +1,21 @@
+[
+  "patient_has_finding_of_asthma_now",
+  "patient_has_finding_of_bronchiectasis_now",
+  "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_hemothorax_now",
+  "patient_has_finding_of_tension_pneumothorax_now",
+  "patient_has_diagnosis_of_pneumothorax_inthehistory",
+  "patient_has_undergone_surgical_procedure_on_thorax_inthehistory",
+  "patient_has_finding_of_allergy_to_minocycline_now",
+  "patient_has_finding_of_allergy_to_tetracycline_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_diagnosis_of_congestive_heart_failure_now",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_conduction_disorder_of_the_heart_now",
+  "patient_has_finding_of_poor_hypertension_control_now",
+  "patient_has_finding_of_dementia_inthehistory",
+  "patient_has_finding_of_seizure_inthehistory",
+  "patient_has_finding_of_disorder_due_to_infection_now"
+]

@@ -1,0 +1,35 @@
+{
+  "patient_id": "sigir-201417",
+  "rank_folder": "rank10_NCT02449928",
+  "trial_info": {
+    "trial_id": "NCT02449928",
+    "title": "Using Sodium Lactate Ringer's Injection Resuscitate Septic Shock Patients",
+    "brief_summary": "Using sodium lactate Ringer's injection resuscitate septic shock patients and Compared with other solution, in order to make clear whether can improve the prognosis.",
+    "phase": "",
+    "drugs": [
+      "sodium lactate Ringer's injection(Baxter",
+      "ShangHai",
+      "China)",
+      "Compound Sodium Chloride Injection (CR Double-Crane",
+      "Beijing",
+      "China)"
+    ],
+    "diseases": [
+      "Severe Sepsis With Septic Shock",
+      "Lactate"
+    ],
+    "enrollment": ""
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_septic_shock_now"
+  ],
+  "exclusion_criteria": [
+    "patient_is_pregnant_now",
+    "patient_is_breastfeeding_now",
+    "patient_has_finding_of_hepatic_failure_now",
+    "patient_is_taking_linezolid_containing_product_now",
+    "patient_has_diagnosis_of_pheochromocytoma_now",
+    "patient_has_diagnosis_of_malignant_tumor_of_lymphoid_hemopoietic_and_related_tissue_now",
+    "patient_is_undergoing_continuous_venovenous_hemofiltration_now"
+  ]
+}

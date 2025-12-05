@@ -1,0 +1,11 @@
+{
+  "trial_id": 2583,
+  "nct_id": "NCT01561794a",
+  "status": "survivor",
+  "total_clauses": 3,
+  "unsat_any": 0,
+  "unsat_explicit": 0,
+  "frac_unsat_any": 0.0,
+  "pct_unsat_any": 0.0,
+  "pct_unsat_explicit": 0.0
+}

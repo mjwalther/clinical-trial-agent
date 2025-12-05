@@ -1,0 +1,43 @@
+{
+  "patient_id": "sigir-201520",
+  "rank_folder": "rank6_NCT00306124",
+  "trial_info": {
+    "trial_id": "NCT00306124",
+    "title": "Dopaminergic Enhancement of Learning and Memory in Healthy Adults and Patients With Dementia/Mild Cognitive Impairment",
+    "brief_summary": "This study aims to determine whether levodopa is effective in boosting learning and memory in healthy subjects and patients with dementia or Mild Cognitive Impairment.~We also examine in healthy subjects using functional magnetic resonance imaging which brain regions mediate improved learning after levodopa administration.",
+    "phase": "Phase 4",
+    "drugs": [
+      "Levodopa"
+    ],
+    "diseases": [
+      "Healthy",
+      "Alzheimer's Disease",
+      "Mild Cognitive Impairment"
+    ],
+    "enrollment": "120.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_diagnosis_of_alzheimer_s_disease_now",
+    "patient_has_diagnosis_of_mild_cognitive_disorder_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_allergy_to_levodopa_now",
+    "patient_has_allergy_to_tetrazine_now",
+    "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthehistory",
+    "patient_has_finding_of_nicotine_withdrawal_now",
+    "patient_tobacco_smoking_behavior_finding_value_recorded_now_withunit_cigarettes_per_day",
+    "patient_coffee_value_recorded_now_withunit_cups_per_day",
+    "patient_coffee_value_recorded_now_withunit_glasses_per_day",
+    "patient_alcohol_value_recorded_now_withunit_grams",
+    "patient_has_finding_of_increased_muscle_tone_now",
+    "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+    "patient_has_diagnosis_of_asthma_now",
+    "patient_has_diagnosis_of_diabetes_mellitus_now",
+    "patient_has_diagnosis_of_glaucoma_now",
+    "patient_has_finding_of_severe_hearing_loss_now",
+    "patient_has_finding_of_lesion_of_brain_now",
+    "patient_is_taking_dopamine_receptor_agonist_containing_product_now",
+    "patient_is_taking_dopamine_receptor_antagonist_containing_product_now",
+    "patient_has_finding_of_parkinsonian_features_now"
+  ]
+}

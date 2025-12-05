@@ -1,0 +1,1398 @@
+{
+  "patient_id": "sigir-20141",
+  "patient_summary": "A 58-year-old African-American woman presents to the ER with episodic pressing/burning anterior chest pain that began two days earlier for the first time in her life. The pain started while she was walking, radiates to the back, and is accompanied by nausea, diaphoresis and mild dyspnea, but is not increased on inspiration. The latest episode of pain ended half an hour prior to her arrival. She is known to have hypertension and obesity. She denies smoking, diabetes, hypercholesterolemia, or a family history of heart disease. She currently takes no medications. Physical examination is normal. The EKG shows nonspecific changes.",
+  "trials_evaluated": [
+    {
+      "rank": "rank10_NCT02003781",
+      "trial_id": "NCT02003781",
+      "title": "Individualized Prevention Strategy for High Risk Patients in Cardiovascular Disease: Prospective Cohort Study (Cardiovascular and Metabolic Disease Etiology Research Center - HIgh Risk Cohort) CMERC-HI",
+      "phase": "",
+      "drugs": [],
+      "diseases": [
+        "High Risk Cardiovascular Disease Patients"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 18,
+          "satisfied": 14,
+          "violated": 4,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+                "normalized": "patient_has_diagnosis_of_coronary_arteriosclerosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+                "normalized": "patient_has_diagnosis_of_coronary_arteriosclerosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_failure_inthehistory",
+                "normalized": "patient_has_finding_of_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_failure_now",
+                "normalized": "patient_has_finding_of_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_peripheral_arterial_occlusive_disease_inthehistory",
+                "normalized": "patient_has_finding_of_peripheral_arterial_occlusive_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_peripheral_arterial_occlusive_disease_now",
+                "normalized": "patient_has_finding_of_peripheral_arterial_occlusive_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_sepsis_now",
+                "normalized": "patient_has_diagnosis_of_sepsis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_sex_is_female_now",
+                "normalized": "patient_sex_is_female",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_breastfeeding_now",
+                "normalized": "patient_is_breastfeeding",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergy_to_contrast_media_inthehistory",
+                "normalized": "patient_has_finding_of_allergy_to_contrast_media",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_transplantation_inthehistory",
+                "normalized": "patient_has_undergone_transplantation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_rejection_of_renal_transplant_now",
+                "normalized": "patient_has_finding_of_acute_rejection_of_renal_transplant",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_acute_coronary_syndrome_inthehistory",
+                "normalized": "patient_has_diagnosis_of_acute_coronary_syndrome",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_acute_coronary_syndrome",
+                    "preferred_term": "Acute coronary syndrome",
+                    "conceptId": "394659003",
+                    "fact_id": "diag_global_004"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_acute_coronary_syndrome_now",
+                "normalized": "patient_has_diagnosis_of_acute_coronary_syndrome",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_acute_coronary_syndrome",
+                    "preferred_term": "Acute coronary syndrome",
+                    "conceptId": "394659003",
+                    "fact_id": "diag_global_004"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_acute_myocardial_infarction_inthehistory",
+                "normalized": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                    "preferred_term": null,
+                    "conceptId": "57054005",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_acute_myocardial_infarction_now",
+                "normalized": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                    "preferred_term": null,
+                    "conceptId": "57054005",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 4 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank1_NCT00133328",
+      "trial_id": "NCT00133328",
+      "title": "A Morbidity-Mortality and Remodeling Study With Valsartan",
+      "phase": "Phase 4",
+      "drugs": [
+        "valsartan"
+      ],
+      "diseases": [
+        "Hypertension",
+        "Ischemic Heart Disease",
+        "Congestive Heart Failure"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 3,
+          "satisfied": 2,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_liver_damage_now",
+                "normalized": "patient_has_finding_of_liver_damage",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_acute_myocardial_infarction_now",
+                "normalized": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                    "preferred_term": null,
+                    "conceptId": "57054005",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank2_NCT00990262",
+      "trial_id": "NCT00990262",
+      "title": "Rule Out Myocardial Infarction by Computer Assisted Tomography",
+      "phase": "",
+      "drugs": [
+        "Cardiac Computed Tomography"
+      ],
+      "diseases": [
+        "Acute Coronary Syndrome",
+        "Myocardial Infarction",
+        "Unstable Angina Pectoris"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 17,
+          "satisfied": 16,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patients_creatine_kinase_isoenzyme_mb_fraction_is_positive_now",
+                "normalized": "patients_creatine_kinase_isoenzyme_mb_fraction_is_positive",
+                "patient_has": false
+              },
+              {
+                "criterion": "patients_troponin_is_positive_now",
+                "normalized": "patients_troponin_is_positive",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_st_segment_depression_now",
+                "normalized": "patient_has_finding_of_st_segment_depression",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_st_segment_elevation_now",
+                "normalized": "patient_has_finding_of_st_segment_elevation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hemodynamic_instability_now",
+                "normalized": "patient_has_finding_of_hemodynamic_instability",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_patient_s_condition_unstable_now",
+                "normalized": "patient_has_finding_of_patient_s_condition_unstable",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_ventricular_tachycardia_now",
+                "normalized": "patient_has_finding_of_ventricular_tachycardia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_creatinine_renal_clearance_value_recorded_now_withunit_milliliters_per_minute",
+                "normalized": "patient_creatinine_renal_clearance_value_recorded_now_withunit_milliliters_per_minute",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_metformin_inthefuture48hours",
+                "normalized": "patient_is_exposed_to_metformin",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_metformin_now",
+                "normalized": "patient_is_exposed_to_metformin",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_asthma_now",
+                "normalized": "patient_has_diagnosis_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_reactive_airway_disease_now",
+                "normalized": "patient_has_diagnosis_of_reactive_airway_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_atrial_fibrillation_now",
+                "normalized": "patient_has_finding_of_atrial_fibrillation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_intolerance_to_beta_adrenergic_receptor_antagonist_inthehistory",
+                "normalized": "patient_has_intolerance_to_beta_adrenergic_receptor_antagonist",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_coronary_angiography_now",
+                "normalized": "patient_is_undergoing_coronary_angiography",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_undergoing_percutaneous_coronary_intervention_now",
+                "normalized": "patient_is_undergoing_percutaneous_coronary_intervention",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_chest_pain_now",
+                "normalized": "patient_has_finding_of_chest_pain",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_chest_pain",
+                    "preferred_term": null,
+                    "conceptId": "29857009",
+                    "fact_id": "fact005"
+                  },
+                  {
+                    "original_name": "patient_has_finding_of_chest_pain",
+                    "preferred_term": null,
+                    "conceptId": "29857009",
+                    "fact_id": "diag_global_003"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank3_NCT01253486",
+      "trial_id": "NCT01253486",
+      "title": "Expressive Writing for Heart Healing",
+      "phase": "",
+      "drugs": [
+        "Disease-related Expressive writing",
+        "Active Comparator: Traditional expressive writing",
+        "Sham Comparator: Neutral writing"
+      ],
+      "diseases": [
+        "Ischemic Heart Disease",
+        "Obesity"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 2,
+          "satisfied": 2,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_poor_manual_dexterity_now",
+                "normalized": "patient_has_finding_of_poor_manual_dexterity",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_visual_impairment_now",
+                "normalized": "patient_has_finding_of_visual_impairment",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 2 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank4_NCT01382277",
+      "trial_id": "NCT01382277",
+      "title": "Rosuvastatin Effect on Reducing Coronary Atherosclerosis Plaques Volume",
+      "phase": "Phase 4",
+      "drugs": [
+        "Rosuvastatin"
+      ],
+      "diseases": [
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 66,
+          "satisfied": 64,
+          "violated": 2,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+                "normalized": "patient_has_undergone_coronary_artery_bypass_graft",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+                "normalized": "patient_has_undergone_percutaneous_coronary_intervention",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_will_undergo_coronary_artery_bypass_graft_inthefuture3months",
+                "normalized": "patient_will_undergo_coronary_artery_bypass_graft",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_will_undergo_percutaneous_coronary_intervention_inthefuture3months",
+                "normalized": "patient_will_undergo_percutaneous_coronary_intervention",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_troponin_i_measurement_value_recorded_now_withunit_unit",
+                "normalized": "patient_troponin_i_measurement_value_recorded_now_withunit_unit",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_troponin_t_measurement_value_recorded_now_withunit_unit",
+                "normalized": "patient_troponin_t_measurement_value_recorded_now_withunit_unit",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_failure_now",
+                "normalized": "patient_has_finding_of_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_can_undergo_coronary_angiography_now",
+                "normalized": "patient_can_undergo_coronary_angiography",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_cardiac_arrhythmia_now",
+                "normalized": "patient_has_finding_of_cardiac_arrhythmia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_tachycardia_now",
+                "normalized": "patient_has_finding_of_tachycardia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_secondary_hyperlipidemia_now",
+                "normalized": "patient_has_finding_of_secondary_hyperlipidemia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_familial_hypercholesterolemia_now",
+                "normalized": "patient_has_diagnosis_of_familial_hypercholesterolemia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "normalized": "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "normalized": "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_diabetic_poor_control_now",
+                "normalized": "patient_has_finding_of_diabetic_poor_control",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_glycosylated_hemoglobin_value_recorded_now_withunit_percent",
+                "normalized": "patient_glycosylated_hemoglobin_value_recorded_now_withunit_percent",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_triglyceride_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+                "normalized": "patient_triglyceride_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_alanine_aminotransferase_measurement_value_recorded_now_withunit_times_upper_limit_of_normal",
+                "normalized": "patient_alanine_aminotransferase_measurement_value_recorded_now_withunit_times_upper_limit_of_normal",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_decreased_liver_function_now",
+                "normalized": "patient_has_finding_of_decreased_liver_function",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_disease_of_liver_now",
+                "normalized": "patient_has_diagnosis_of_disease_of_liver",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_serum_creatinine_level_finding_value_recorded_now_withunit_micromoles_per_liter",
+                "normalized": "patient_serum_creatinine_level_finding_value_recorded_now_withunit_micromoles_per_liter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_muscle_pain_now",
+                "normalized": "patient_has_finding_of_muscle_pain",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_platelet_count_finding_value_recorded_now_withunit_per_liter",
+                "normalized": "patient_platelet_count_finding_value_recorded_now_withunit_per_liter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_white_blood_cell_count_value_recorded_now_withunit_per_liter",
+                "normalized": "patient_white_blood_cell_count_value_recorded_now_withunit_per_liter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_platelet_count_finding_value_recorded_now_withunit_10_9_per_liter",
+                "normalized": "patient_platelet_count_finding_value_recorded_now_withunit_10_9_per_liter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_white_blood_cell_count_value_recorded_now_withunit_10_9_per_liter",
+                "normalized": "patient_white_blood_cell_count_value_recorded_now_withunit_10_9_per_liter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_breastfeeding_now",
+                "normalized": "patient_is_breastfeeding",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_childbearing_potential_now",
+                "normalized": "patient_has_childbearing_potential",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_sex_is_female_now",
+                "normalized": "patient_sex_is_female",
+                "patient_has": false
+              },
+              {
+                "criterion": "patients_breastfeeding_is_positive_now",
+                "normalized": "patients_breastfeeding_is_positive",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_contraception_now",
+                "normalized": "patient_has_finding_of_contraception",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_cytopathology_procedure_preparation_of_smear_genital_source_inthehistory",
+                "normalized": "patient_has_undergone_cytopathology_procedure_preparation_of_smear_genital_source",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_alcohol_abuse_inthepast5years",
+                "normalized": "patient_has_finding_of_alcohol_abuse",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_physical_health_problems_now",
+                "normalized": "patient_has_finding_of_physical_health_problems",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_serious_physical_health_problem_now",
+                "normalized": "patient_has_finding_of_serious_physical_health_problem",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_atorvastatin_containing_product_now",
+                "normalized": "patient_is_taking_atorvastatin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_cholestyramine_containing_product_now",
+                "normalized": "patient_is_taking_cholestyramine_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_clarithromycin_containing_product_now",
+                "normalized": "patient_is_taking_clarithromycin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_clofibrate_containing_product_now",
+                "normalized": "patient_is_taking_clofibrate_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_colestipol_hydrochloride_now",
+                "normalized": "patient_is_exposed_to_colestipol_hydrochloride",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_cyclosporine_containing_product_now",
+                "normalized": "patient_is_taking_cyclosporine_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_erythromycin_containing_product_now",
+                "normalized": "patient_is_taking_erythromycin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_erythromycin_ethylsuccinate_now",
+                "normalized": "patient_is_exposed_to_erythromycin_ethylsuccinate",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_ezetimibe_containing_product_now",
+                "normalized": "patient_is_taking_ezetimibe_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_fenofibrate_containing_product_now",
+                "normalized": "patient_is_taking_fenofibrate_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_fish_oil_now",
+                "normalized": "patient_is_exposed_to_fish_oil",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_fluconazole_containing_product_now",
+                "normalized": "patient_is_taking_fluconazole_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_fluvastatin_containing_product_now",
+                "normalized": "patient_is_taking_fluvastatin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_gemfibrozil_now",
+                "normalized": "patient_is_exposed_to_gemfibrozil",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_itraconazole_containing_product_now",
+                "normalized": "patient_is_taking_itraconazole_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_ketoconazole_containing_product_now",
+                "normalized": "patient_is_taking_ketoconazole_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_lovastatin_containing_product_now",
+                "normalized": "patient_is_taking_lovastatin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_niacin_now",
+                "normalized": "patient_is_exposed_to_niacin",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_niacin_value_recorded_now_withunit_milligrams",
+                "normalized": "patient_niacin_value_recorded_now_withunit_milligrams",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_niacin_containing_product_now",
+                "normalized": "patient_is_taking_niacin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_niacin_containing_product_value_recorded_now_withunit_milligrams",
+                "normalized": "patient_niacin_containing_product_value_recorded_now_withunit_milligrams",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_pravastatin_containing_product_now",
+                "normalized": "patient_is_taking_pravastatin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_probucol_containing_product_now",
+                "normalized": "patient_is_taking_probucol_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_protease_inhibitor_now",
+                "normalized": "patient_is_exposed_to_protease_inhibitor",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_rosuvastatin_containing_product_now",
+                "normalized": "patient_is_taking_rosuvastatin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_simvastatin_containing_product_now",
+                "normalized": "patient_is_taking_simvastatin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_sulfaphenazole_now",
+                "normalized": "patient_is_exposed_to_sulfaphenazole",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_diagnosis_of_acute_myocardial_infarction_inthepast6months",
+                "normalized": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_acute_myocardial_infarction",
+                    "preferred_term": null,
+                    "conceptId": "57054005",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_hypertensive_disorder_now",
+                "normalized": "patient_has_finding_of_hypertensive_disorder",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_hypertensive_disorder",
+                    "preferred_term": null,
+                    "conceptId": "38341003",
+                    "fact_id": "fact007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 2 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank5_NCT01464671",
+      "trial_id": "NCT01464671",
+      "title": "Angiomax® or Unfractionated Heparin for Patients Undergoing Percutaneous Coronary Intervention",
+      "phase": "Phase 4",
+      "drugs": [
+        "Bivalirudin",
+        "Heparin"
+      ],
+      "diseases": [
+        "Coronary Artery Disease"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 9,
+          "satisfied": 7,
+          "violated": 2,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_cardiogenic_shock_now",
+                "normalized": "patient_has_finding_of_cardiogenic_shock",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+                "normalized": "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_heparin_induced_thrombocytopenia_inthehistory",
+                "normalized": "patient_has_diagnosis_of_heparin_induced_thrombocytopenia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_contraindication_to_anticoagulant_inthehistory",
+                "normalized": "patient_has_contraindication_to_anticoagulant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_contraindication_to_heparin_inthehistory",
+                "normalized": "patient_has_contraindication_to_heparin",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_breastfeeding_now",
+                "normalized": "patient_is_breastfeeding",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_acute_coronary_syndrome_now",
+                "normalized": "patient_has_finding_of_acute_coronary_syndrome",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_acute_coronary_syndrome",
+                    "preferred_term": null,
+                    "conceptId": "394659003",
+                    "fact_id": "diag_global_004"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+                "normalized": "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction",
+                    "preferred_term": null,
+                    "conceptId": "401314000",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 2 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank6_NCT01499134",
+      "trial_id": "NCT01499134",
+      "title": "Comparison of 2 Beta Blocker Drugs on Peripheral Arterial Disease in Patients With High Blood Pressure",
+      "phase": "Phase 3",
+      "drugs": [
+        "nebivolol",
+        "Metoprolol succinate"
+      ],
+      "diseases": [
+        "Peripheral Artery Disease",
+        "Hypertension"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 22,
+          "satisfied": 19,
+          "violated": 3,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_is_undergoing_clinical_trial_now",
+                "normalized": "patient_is_undergoing_clinical_trial",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_ankle_brachial_pressure_index_value_recorded_now_withunit_ratio",
+                "normalized": "patient_ankle_brachial_pressure_index_value_recorded_now_withunit_ratio",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_ulcer_of_lower_extremity_now",
+                "normalized": "patient_has_finding_of_ulcer_of_lower_extremity",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_amputation_of_limb_inthehistory",
+                "normalized": "patient_has_undergone_amputation_of_limb",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "normalized": "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_poor_hypertension_control_now",
+                "normalized": "patient_has_finding_of_poor_hypertension_control",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "normalized": "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_allergic_disposition_inthehistory",
+                "normalized": "patient_has_finding_of_allergic_disposition",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_beta_adrenergic_receptor_blocking_agent_therapy_inthehistory",
+                "normalized": "patient_has_undergone_beta_adrenergic_receptor_blocking_agent_therapy",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_failure_inthehistory",
+                "normalized": "patient_has_finding_of_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_failure_now",
+                "normalized": "patient_has_finding_of_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_exposed_to_nitrate_salt_now",
+                "normalized": "patient_is_exposed_to_nitrate_salt",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_nitroglycerin_20_mg_g_cutaneous_ointment_now",
+                "normalized": "patient_is_taking_nitroglycerin_20_mg_g_cutaneous_ointment",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_nitroglycerin_containing_product_now",
+                "normalized": "patient_is_taking_nitroglycerin_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_nitroglycerin_containing_product_in_oral_dose_form_now",
+                "normalized": "patient_is_taking_nitroglycerin_containing_product_in_oral_dose_form",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_due_to_infection_now",
+                "normalized": "patient_has_finding_of_disorder_due_to_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_inflammatory_disorder_now",
+                "normalized": "patient_has_finding_of_inflammatory_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_inthepast5years",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_condition_finding_now",
+                "normalized": "patient_has_finding_of_disease_condition_finding",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_pain_now",
+                "normalized": "patient_has_finding_of_pain",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_pain",
+                    "preferred_term": null,
+                    "conceptId": "22253000",
+                    "fact_id": "fact005"
+                  },
+                  {
+                    "original_name": "patient_has_finding_of_pain",
+                    "preferred_term": null,
+                    "conceptId": "22253000",
+                    "fact_id": "diag_global_003"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_myocardial_infarction_inthepast6months",
+                "normalized": "patient_has_finding_of_myocardial_infarction",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_myocardial_infarction",
+                    "preferred_term": null,
+                    "conceptId": "22298006",
+                    "fact_id": "diag_global_007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_angina_pectoris_now",
+                "normalized": "patient_has_finding_of_angina_pectoris",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_angina_pectoris",
+                    "preferred_term": null,
+                    "conceptId": "194828000",
+                    "fact_id": "diag_global_003"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 3 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank7_NCT01653587",
+      "trial_id": "NCT01653587",
+      "title": "AngioSeal Versus Radial Approach in Acute Coronary Syndrome",
+      "phase": "Phase 4",
+      "drugs": [
+        "Percutaneous coronary intervention"
+      ],
+      "diseases": [
+        "Acute Coronary Syndrome"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 20,
+          "satisfied": 17,
+          "violated": 3,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_age_value_recorded_now_in_years",
+                "normalized": "patient_age_value_recorded_now_in_years",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_coagulation_factor_xa_inhibitor_containing_product_now",
+                "normalized": "patient_is_taking_coagulation_factor_xa_inhibitor_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_taking_direct_thrombin_inhibitor_containing_product_now",
+                "normalized": "patient_is_taking_direct_thrombin_inhibitor_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_hypersensitivity_to_anticoagulant_now",
+                "normalized": "patient_has_hypersensitivity_to_anticoagulant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_hypersensitivity_to_platelet_aggregation_inhibitor_containing_product_now",
+                "normalized": "patient_has_hypersensitivity_to_platelet_aggregation_inhibitor_containing_product",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_creatinine_renal_clearance_value_recorded_now_withunit_milliliters_per_minute",
+                "normalized": "patient_creatinine_renal_clearance_value_recorded_now_withunit_milliliters_per_minute",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hepatic_failure_now",
+                "normalized": "patient_has_finding_of_hepatic_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_high_risk_of_bleeding_now",
+                "normalized": "patient_has_finding_of_high_risk_of_bleeding",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_peptic_ulcer_now",
+                "normalized": "patient_has_finding_of_peptic_ulcer",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_platelet_count_finding_value_recorded_now_withunit_per_cubic_millimeter",
+                "normalized": "patient_platelet_count_finding_value_recorded_now_withunit_per_cubic_millimeter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_cardiogenic_shock_now",
+                "normalized": "patient_has_finding_of_cardiogenic_shock",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_myocardial_revascularization_inthehistory",
+                "normalized": "patient_has_undergone_myocardial_revascularization",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_peripheral_arterial_occlusive_disease_now",
+                "normalized": "patient_has_finding_of_peripheral_arterial_occlusive_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_undergone_clinical_drug_trial_inthepast30days",
+                "normalized": "patient_has_undergone_clinical_drug_trial",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_will_undergo_percutaneous_coronary_intervention_inthefuture",
+                "normalized": "patient_will_undergo_percutaneous_coronary_intervention",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_condition_finding_now",
+                "normalized": "patient_has_finding_of_disease_condition_finding",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_bleeding_now",
+                "normalized": "patient_has_finding_of_bleeding",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_bleeding",
+                    "preferred_term": null,
+                    "conceptId": "131148009",
+                    "fact_id": "diag_global_009"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_hypertensive_disorder_now",
+                "normalized": "patient_has_diagnosis_of_hypertensive_disorder",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_diagnosis_of_hypertensive_disorder",
+                    "preferred_term": "Hypertensive disorder",
+                    "conceptId": "38341003",
+                    "fact_id": "fact007"
+                  }
+                ]
+              },
+              {
+                "criterion": "patient_has_finding_of_disease_now",
+                "normalized": "patient_has_finding_of_disease",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_disease",
+                    "preferred_term": null,
+                    "conceptId": "64572001",
+                    "fact_id": "fact007"
+                  },
+                  {
+                    "original_name": "patient_has_finding_of_disease",
+                    "preferred_term": null,
+                    "conceptId": "64572001",
+                    "fact_id": "diag_global_004"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 3 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank8_NCT01902602",
+      "trial_id": "NCT01902602",
+      "title": "Grand Autohemo-Therapy With Oxygen-ozone on Patients With Hypertonia",
+      "phase": "",
+      "drugs": [],
+      "diseases": [
+        "Hypertonia"
+      ],
+      "eligibility": {
+        "eligible": false,
+        "exclusion_criteria": {
+          "total": 26,
+          "satisfied": 25,
+          "violated": 1,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_finding_of_diabetes_mellitus_now",
+                "normalized": "patient_has_finding_of_diabetes_mellitus",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_renal_impairment_now",
+                "normalized": "patient_has_finding_of_renal_impairment",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+                "normalized": "patient_has_diagnosis_of_malignant_neoplastic_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_thyroid_dysfunction_now",
+                "normalized": "patient_has_finding_of_thyroid_dysfunction",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+                "normalized": "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+                "normalized": "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_peripheral_arterial_occlusive_disease_now",
+                "normalized": "patient_has_finding_of_peripheral_arterial_occlusive_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_heart_valve_regurgitation_now",
+                "normalized": "patient_has_finding_of_heart_valve_regurgitation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_abdominal_aortic_aneurysm_now",
+                "normalized": "patient_has_diagnosis_of_abdominal_aortic_aneurysm",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_disorder_due_to_infection_now",
+                "normalized": "patient_has_finding_of_disorder_due_to_infection",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_body_temperature_value_recorded_now_withunit_celsius",
+                "normalized": "patient_body_temperature_value_recorded_now_withunit_celsius",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_asthma_now",
+                "normalized": "patient_has_finding_of_asthma",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+                "normalized": "patient_has_finding_of_chronic_obstructive_lung_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_cerebrovascular_accident_inthepast12weeks",
+                "normalized": "patient_has_finding_of_cerebrovascular_accident",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_acute_hepatic_failure_now",
+                "normalized": "patient_has_finding_of_acute_hepatic_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_poisoning_now",
+                "normalized": "patient_has_finding_of_poisoning",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_psychoactive_substance_use_disorder_now",
+                "normalized": "patient_has_diagnosis_of_psychoactive_substance_use_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hyperthyroidism_now",
+                "normalized": "patient_has_finding_of_hyperthyroidism",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_low_blood_pressure_now",
+                "normalized": "patient_has_finding_of_low_blood_pressure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hypocalcemia_now",
+                "normalized": "patient_has_finding_of_hypocalcemia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hypoglycemia_now",
+                "normalized": "patient_has_finding_of_hypoglycemia",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_allergy_to_ozone_now",
+                "normalized": "patient_has_allergy_to_ozone",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_is_pregnant_now",
+                "normalized": "patient_is_pregnant",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_blood_coagulation_disorder_now",
+                "normalized": "patient_has_finding_of_blood_coagulation_disorder",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_hemophilia_now",
+                "normalized": "patient_has_finding_of_hemophilia",
+                "patient_has": false
+              }
+            ],
+            "violated": [
+              {
+                "criterion": "patient_has_finding_of_dyspnea_now",
+                "normalized": "patient_has_finding_of_dyspnea",
+                "patient_has": true,
+                "details": [
+                  {
+                    "original_name": "patient_has_finding_of_dyspnea",
+                    "preferred_term": null,
+                    "conceptId": "267036007",
+                    "fact_id": "fact004"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "summary": "Patient is INELIGIBLE. 1 exclusion criteria violated."
+      }
+    },
+    {
+      "rank": "rank9_NCT01906957",
+      "trial_id": "NCT01906957",
+      "title": "Cognition and Exercise Training",
+      "phase": "",
+      "drugs": [
+        "high intensity interval training (HIIT)",
+        "moderate intensity continuous exercise training"
+      ],
+      "diseases": [
+        "Metabolic Syndrome",
+        "Coronary Heart Disease",
+        "Chronic Heart Failure"
+      ],
+      "eligibility": {
+        "eligible": true,
+        "exclusion_criteria": {
+          "total": 8,
+          "satisfied": 8,
+          "violated": 0,
+          "details": {
+            "satisfied": [
+              {
+                "criterion": "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+                "normalized": "patient_has_diagnosis_of_coronary_arteriosclerosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_chronic_systolic_heart_failure_now",
+                "normalized": "patient_has_diagnosis_of_chronic_systolic_heart_failure",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+                "normalized": "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_aortic_valve_stenosis_now",
+                "normalized": "patient_has_diagnosis_of_aortic_valve_stenosis",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_left_main_coronary_artery_disease_now",
+                "normalized": "patient_has_finding_of_left_main_coronary_artery_disease",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_will_undergo_coronary_artery_bypass_graft_now",
+                "normalized": "patient_will_undergo_coronary_artery_bypass_graft",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_diagnosis_of_chronic_atrial_fibrillation_now",
+                "normalized": "patient_has_diagnosis_of_chronic_atrial_fibrillation",
+                "patient_has": false
+              },
+              {
+                "criterion": "patient_has_finding_of_impaired_exercise_tolerance_now",
+                "normalized": "patient_has_finding_of_impaired_exercise_tolerance",
+                "patient_has": false
+              }
+            ],
+            "violated": []
+          }
+        },
+        "summary": "Patient is ELIGIBLE. None of the 8 exclusion criteria violated."
+      }
+    }
+  ],
+  "summary": {
+    "total_trials": 10,
+    "eligible_trials": 2,
+    "ineligible_trials": 8
+  }
+}

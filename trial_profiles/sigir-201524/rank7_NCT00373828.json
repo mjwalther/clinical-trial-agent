@@ -1,0 +1,42 @@
+{
+  "patient_id": "sigir-201524",
+  "rank_folder": "rank7_NCT00373828",
+  "trial_info": {
+    "trial_id": "NCT00373828",
+    "title": "Non-cardiac Chest Pain Evaluation and Treatment Study (CARPA) - Part 1: Diagnosis.",
+    "brief_summary": "The overall aim of the project is to evaluate diagnosis and treatment of chest pain originating from the musculoskeletal system. Specifically, we wish to investigate prevalence and character of such chest pain in a population of patients with acute chest pain, admitted to a university hospital based acute chest pain clinic, and undergoing evaluation of acute coronary syndrome (Part 1). Then, to test a manually-based treatment protocol to patients with diagnosed musculoskeletal chest pain in a randomized clinical trial (Part 2).~The specific purpose of this study (Part 1) is to determine the exact number of patients with acute chest pain origination from the musculoskeletal system, and to describe their cardiac status with respect to ischemic heart disease. Further, we wish to evaluate the decision making process of the chiropractor.",
+    "phase": "",
+    "drugs": [],
+    "diseases": [
+      "Non-Cardiac Chest Pain",
+      "Undiagnosed Chest Pain",
+      "Musculoskeletal Chest Pain",
+      "Ischemic Heart Disease"
+    ],
+    "enrollment": "302.0"
+  },
+  "inclusion_criteria": [
+    "patient_has_finding_of_acute_chest_pain_now",
+    "patient_has_finding_of_chest_pain_now",
+    "patient_has_diagnosis_of_acute_myocardial_infarction_now",
+    "patient_has_suspicion_of_acute_myocardial_infarction_now",
+    "patient_has_undergone_electrocardiographic_procedure_now_outcome_is_normal",
+    "patient_has_finding_of_pain_now"
+  ],
+  "exclusion_criteria": [
+    "patient_has_finding_of_acute_coronary_syndrome_now",
+    "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+    "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+    "patient_has_finding_of_chest_pain_now",
+    "patient_has_diagnosis_of_disease_now",
+    "patient_has_finding_of_arthropathy_now",
+    "patient_has_diagnosis_of_arthropathy_now",
+    "patient_has_diagnosis_of_type_1_diabetes_mellitus_now",
+    "patient_has_finding_of_fibromyalgia_now",
+    "patient_has_finding_of_chest_injury_inthehistory",
+    "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+    "patient_has_suspicion_of_osteoporosis_now",
+    "patient_is_pregnant_now",
+    "patient_has_finding_of_dementia_now"
+  ]
+}

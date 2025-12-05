@@ -1,0 +1,20 @@
+{
+  "_id": "NCT01646411",
+  "title": "300 Antibody Diagnostic Test Kit",
+  "text": "Summary: For the development of a Point of Care IVD test kit for acute phase disease detection against a variety of bacterial and viral infections. Phase one includes 100 clinical diagnosed positive and 200 clinically normal serum and whole blood matched specimens for specificity and sensitivity determination for each marker. The positive samples must be IgM positive using any FDA cleared ELISA test kit. The negatives samples must be negative for IgM.\nInclusion criteria: inclusion criteria: \n\n current acute infection \n\n age 18-70 \n\n male or female \n\n any race \n\n currently active symptoms\nExclusion criteria: ",
+  "metadata": {
+    "brief_title": "300 Antibody Diagnostic Test Kit",
+    "phase": "",
+    "drugs": "",
+    "drugs_list": [],
+    "diseases": "['Acute Bacterial Infections', 'Acute Viral Infections']",
+    "diseases_list": [
+      "Acute Bacterial Infections",
+      "Acute Viral Infections"
+    ],
+    "enrollment": "300.0",
+    "inclusion_criteria": "inclusion criteria: \n\n current acute infection \n\n age 18-70 \n\n male or female \n\n any race \n\n currently active symptoms",
+    "exclusion_criteria": "",
+    "brief_summary": "For the development of a Point of Care IVD test kit for acute phase disease detection against a variety of bacterial and viral infections. Phase one includes 100 clinical diagnosed positive and 200 clinically normal serum and whole blood matched specimens for specificity and sensitivity determination for each marker. The positive samples must be IgM positive using any FDA cleared ELISA test kit. The negatives samples must be negative for IgM."
+  }
+}

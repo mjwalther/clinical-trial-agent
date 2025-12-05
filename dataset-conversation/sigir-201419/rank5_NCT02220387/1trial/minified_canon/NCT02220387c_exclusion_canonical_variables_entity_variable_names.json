@@ -1,0 +1,15 @@
+[
+  "patient_is_exposed_to_smoke_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_now",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_tuberculosis_now",
+  "patient_has_diagnosis_of_allergic_disorder_now",
+  "patient_has_diagnosis_of_autoimmune_disease_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_has_finding_of_disease_caused_by_parasite_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now"
+]

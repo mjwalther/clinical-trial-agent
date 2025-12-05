@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_axillary_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_finding_of_fever_inthepast48hours",
+  "patient_has_finding_of_fever_now",
+  "patient_axillary_temperature_value_recorded_now_withunit_celsius",
+  "patient_has_diagnosis_of_falciparum_malaria_now",
+  "patient_parasite_quantitation_value_recorded_now_withunit_asexual_parasites_per_cubic_millimeter",
+  "patient_parasite_quantitation_value_recorded_now_withunit_parasites_per_cubic_millimeter"
+]
