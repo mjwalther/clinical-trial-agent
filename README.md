@@ -156,5 +156,5 @@ Thanks to:
 
 ## Contact
 
-Matthias Jiro Walther (https://www.linkedin.com/in/jirowalther/)
-George Song (https://www.linkedin.com/in/georgedsong/)
+- Matthias Jiro Walther (https://www.linkedin.com/in/jirowalther/)
+- George Song (https://www.linkedin.com/in/georgedsong/)
