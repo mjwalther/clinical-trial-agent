@@ -12,16 +12,16 @@ from langchain_core.chat_history import InMemoryChatMessageHistory
 
 class ClinicalTrialMatchingAgent:
     """
-    Agent that matches patients to eligible clinical trials through conversation.
+    Agent that matches patients to eligible clinical trials through thoughtful conversation.
     """
     
     def __init__(self, patient_profiles_dir: str, trial_profiles_dir: str, openai_api_key: str):
         self.patient_profiles_dir = Path(patient_profiles_dir)
         self.trial_profiles_dir = Path(trial_profiles_dir)
         
-        # Initialize LLM - using gpt-4o for better reasoning
+        # Initialize LLM
         self.llm = ChatOpenAI(
-            model="gpt-4o",  # Upgraded from gpt-4o-mini
+            model="gpt-4o",
             temperature=0.7,
             openai_api_key=openai_api_key
         )
@@ -43,12 +43,13 @@ class ClinicalTrialMatchingAgent:
         self.db_path = "trialogue_preferences.db"
         self.init_preference_database()
     
-    # =====================================================================
-    # SQL DATABASE METHODS - For preference-based trial narrowing ONLY
-    # =====================================================================
-    
+
+    # SQL database method for preference-based trial narrowing (if >1 eligible trial is found)
     def init_preference_database(self):
-        """Initialize SQLite database for storing user preferences and trial characteristics."""
+        """
+        SQLite database for storing user preferences and trial characteristics.
+        """
+
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -99,10 +100,13 @@ class ClinicalTrialMatchingAgent:
         conn.commit()
         conn.close()
         
-        print(f"✓ SQL Preference Database initialized at {self.db_path}")
+        print(f"SQL Preferences Database initialized at {self.db_path}")
     
     def store_user_preference(self, session_id: str, question_number: int, question: str, answer: str, preference_type: str):
-        """Store user preference answer in database."""
+        """
+        Storing user preference answers in database.
+        """
+
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -115,10 +119,13 @@ class ClinicalTrialMatchingAgent:
         conn.commit()
         conn.close()
         
-        print(f"✓ Stored preference #{question_number} in SQL database")
+        print(f"Stored preference #{question_number} in SQL database")
     
     def store_trial_characteristics(self, session_id: str, eligible_trials: List[Dict]):
-        """Store characteristics of eligible trials in database for preference matching."""
+        """
+        Store characteristics of eligible trials in database for preference matching.
+        """
+
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -153,10 +160,12 @@ class ClinicalTrialMatchingAgent:
         conn.commit()
         conn.close()
         
-        print(f"✓ Stored {len(eligible_trials)} trial characteristics in SQL database")
+        print(f"Stored {len(eligible_trials)} trial characteristics in SQL database")
     
     def _parse_phase_number(self, phase: str) -> int:
-        """Extract numeric phase from phase string."""
+        """
+        Extract numeric phase from phase string.
+        """
         if not phase or phase == 'Not listed' or phase == 'N/A':
             return 0
         phase_lower = phase.lower()
@@ -171,7 +180,9 @@ class ClinicalTrialMatchingAgent:
         return 0
     
     def _is_invasive_trial(self, interventions_json: str, summary: str) -> int:
-        """Determine if trial involves invasive procedures."""
+        """
+        Determine if trial involves invasive procedures.
+        """
         invasive_keywords = ['surgery', 'surgical', 'invasive', 'injection', 'biopsy', 
                             'catheter', 'endoscopy', 'procedure', 'operation']
         
@@ -187,7 +198,9 @@ class ClinicalTrialMatchingAgent:
         return 0
     
     def _classify_preference_type(self, question: str) -> str:
-        """Classify what type of preference a question is asking about."""
+        """
+        Classify what type of preference a question is asking about.
+        """
         question_lower = question.lower()
         if 'phase' in question_lower or 'early' in question_lower or 'late' in question_lower:
             return 'phase'
@@ -199,8 +212,7 @@ class ClinicalTrialMatchingAgent:
     
     def narrow_trials_by_preferences_sql(self, eligible_trials: List[Dict], preference_qa: List[Dict], session_id: str = "default") -> Dict:
         """
-        Use SQL queries to match user preferences with trial characteristics.
-        Returns best match plus all trial scores for discussion.
+        Using SQL queries to match user preferences with trial characteristics.
         """
         # Store trial characteristics in database
         self.store_trial_characteristics(session_id, eligible_trials)
@@ -221,7 +233,6 @@ class ClinicalTrialMatchingAgent:
             WHERE session_id = ?
             ORDER BY question_number
         ''', (session_id,))
-        
         preferences = cursor.fetchall()
         
         # Analyze each preference against trials using SQL queries
@@ -232,7 +243,7 @@ class ClinicalTrialMatchingAgent:
             answer_lower = answer.lower()
             
             if pref_type == 'phase':
-                # SQL QUERY: Find trials matching phase preference
+                # Find trials matching phase preference
                 if 'early' in answer_lower or 'experimental' in answer_lower or 'cutting' in answer_lower:
                     query = '''
                         SELECT trial_id, trial_index, title, phase
@@ -257,7 +268,7 @@ class ClinicalTrialMatchingAgent:
                     trial_scores[trial_id]['reasons'].append(f"Matches phase preference (Phase: {trial[3]})")
             
             elif pref_type == 'invasiveness':
-                # SQL QUERY: Find non-invasive trials if preferred
+                # Find non-invasive trials if preferred
                 if 'avoid' in answer_lower or 'non-invasive' in answer_lower or 'not invasive' in answer_lower:
                     query = '''
                         SELECT trial_id, trial_index, title
@@ -275,7 +286,7 @@ class ClinicalTrialMatchingAgent:
                         trial_scores[trial_id]['reasons'].append("Non-invasive approach matches preference")
             
             elif pref_type == 'priority':
-                # SQL QUERY: Score based on stated priorities
+                # Score based on stated priorities
                 if 'safety' in answer_lower:
                     # Prefer later phase trials for safety
                     query = '''
@@ -326,16 +337,15 @@ class ClinicalTrialMatchingAgent:
             
             if best_trial_data:
                 reasoning = f"SQL-based matching score: {best_score} points. " + " ".join(trial_scores[best_trial_id]['reasons'])
-                print(f"✓ SQL Preference Matching: Best trial = {best_trial_id} (Score: {best_score})")
+                print(f"SQL Preference Matching: Best trial = {best_trial_id} (Score: {best_score})")
                 
                 return {
                     'trial': best_trial_data,
                     'reasoning': reasoning,
-                    'sql_scores': all_scores,  # Include all trial scores
-                    'all_eligible_trials': eligible_trials  # Include all eligible trials for reference
+                    'sql_scores': all_scores,  
+                    'all_eligible_trials': eligible_trials 
                 }
         
-        # Fallback if no scoring worked - use first trial
         return {
             'trial': eligible_trials[0],
             'reasoning': 'Based on your preferences, this trial appears to be a good match for you.',
@@ -343,9 +353,6 @@ class ClinicalTrialMatchingAgent:
             'all_eligible_trials': eligible_trials
         }
     
-    # =====================================================================
-    # END OF SQL PREFERENCE METHODS
-    # =====================================================================
     
     def generate_flexible_recommendation_message(self, recommendation_data: Dict) -> str:
         """
@@ -364,7 +371,7 @@ class ClinicalTrialMatchingAgent:
         title = trial_info.get('title', 'Unknown Trial')
         trial_id = trial_info.get('trial_id', 'N/A')
         
-        # Store complete trial profile for detailed Q&A
+        # Store complete trial profile for Q&A
         self.recommended_trial_profile = {
             'trial_data': trial_data,
             'trial': trial,
@@ -399,7 +406,9 @@ class ClinicalTrialMatchingAgent:
         return message
         
     def normalize_variable_name(self, variable_name: str) -> str:
-        """Normalize variable names for comparison."""
+        """
+        Normalize variable names for comparison.
+        """
         normalized = variable_name.lower().strip()
         
         # Remove any suffix starting with _inthe
@@ -424,12 +433,16 @@ class ClinicalTrialMatchingAgent:
         return normalized
     
     def is_gender_criterion(self, criterion: str) -> bool:
-        """Check if a criterion is a gender/sex criterion."""
+        """
+        Check if a criterion is a gender/sex criterion.
+        """
         normalized = criterion.lower()
         return 'patient_sex_is_' in normalized or 'patient_gender_is_' in normalized
     
     def should_ignore_criterion(self, criterion: str) -> bool:
-        """Check if a criterion should be ignored during eligibility checking."""
+        """
+        Check if a criterion should be ignored during eligibility checking.
+        """
         normalized = criterion.lower()
         
         # Ignore age recorded in months or days since we have age in years
@@ -489,8 +502,10 @@ class ClinicalTrialMatchingAgent:
         return variables, details
     
     def load_patient_profile(self, patient_id: str) -> Optional[Dict]:
-        """Load a patient's profile."""
-        # Extract number from patient_id (e.g., sigir-20141 -> 20141)
+        """
+        Load a patient's profile.
+        """
+        # Extract number from patient_id
         if 'sigir-' in patient_id:
             file_number = patient_id.split('sigir-')[1]
             filename = f"{file_number}.json"
@@ -506,7 +521,9 @@ class ClinicalTrialMatchingAgent:
             return json.load(f)
     
     def load_trial_profiles(self, patient_id: str) -> List[Dict]:
-        """Load all trial profiles for a patient."""
+        """
+        Load all trial profiles for a patient.
+        """
         trial_folder = self.trial_profiles_dir / patient_id
         
         if not trial_folder.exists():
@@ -522,7 +539,9 @@ class ClinicalTrialMatchingAgent:
         return trials
     
     def format_criterion_name(self, criterion: str, details: List[Dict] = None) -> str:
-        """Convert a criterion variable name to a human-readable format."""
+        """
+        Convert a criterion variable name to a human-readable format.
+        """
         # Start with lowercase version
         readable = criterion.lower()
         
@@ -557,7 +576,6 @@ class ClinicalTrialMatchingAgent:
                         elif 'male' in criterion.lower() and value:
                             return "male gender"
         
-        # Replace underscores with spaces
         readable = readable.replace('_', ' ')
         
         # Handle common medical terminology patterns
@@ -580,10 +598,7 @@ class ClinicalTrialMatchingAgent:
         for old, new in replacements.items():
             readable = readable.replace(old, new)
         
-        # Clean up multiple spaces
         readable = ' '.join(readable.split())
-        
-        # Capitalize first letter
         readable = readable[0].upper() + readable[1:] if readable else readable
         
         return readable
@@ -591,7 +606,7 @@ class ClinicalTrialMatchingAgent:
     def check_trial_eligibility(self, patient_profile: Dict, trial_profile: Dict) -> Dict:
         """
         Check if a patient is eligible for a trial based on BOTH inclusion and exclusion criteria.
-        Patient must have ALL inclusion criteria AND NONE of the exclusion criteria.
+        Patient must have all inclusion criteria and none of the exclusion criteria.
         Special case: Gender criteria are treated as OR (patient needs to match at least one).
         Some criteria are automatically ignored (e.g., age in months when we have age in years).
         """
@@ -615,14 +630,14 @@ class ClinicalTrialMatchingAgent:
         inclusion_missing = []
         
         for criterion in inclusion_criteria:
-            # Skip gender criteria for now - we'll handle them separately
+            # Skip gender criteria, handle them separately
             if criterion in gender_criteria_in_groups:
                 continue
                 
             normalized_criterion = self.normalize_variable_name(criterion)
             
             if normalized_criterion in patient_variables:
-                # Patient HAS the required condition
+                # Patient has the required condition
                 criterion_details = patient_details.get(normalized_criterion, [])
                 inclusion_met.append({
                     'criterion': criterion,
@@ -632,7 +647,7 @@ class ClinicalTrialMatchingAgent:
                     'readable_name': self.format_criterion_name(criterion, criterion_details)
                 })
             else:
-                # Patient does NOT have the required condition
+                # Patient does not have the required condition
                 inclusion_missing.append({
                     'criterion': criterion,
                     'normalized': normalized_criterion,
@@ -640,9 +655,9 @@ class ClinicalTrialMatchingAgent:
                     'readable_name': self.format_criterion_name(criterion, None)
                 })
         
-        # Handle gender criteria groups (OR logic)
+        # Handle gender criteria
         for gender_group in gender_groups:
-            # Check if patient matches ANY of the gender criteria in this group
+            # Check if patient matches any of the gender criteria in this group
             matched_any = False
             matched_criterion = None
             
@@ -654,7 +669,7 @@ class ClinicalTrialMatchingAgent:
                     break
             
             if matched_any:
-                # Patient matches at least one gender criterion - add it as met
+                # Patient matches at least one gender criterion
                 criterion_details = patient_details.get(self.normalize_variable_name(matched_criterion), [])
                 inclusion_met.append({
                     'criterion': matched_criterion,
@@ -667,7 +682,6 @@ class ClinicalTrialMatchingAgent:
                 })
             else:
                 # Patient doesn't match any gender criterion in the group
-                # Only list this as missing once (not for each gender option)
                 inclusion_missing.append({
                     'criterion': ' OR '.join(gender_group),
                     'normalized': 'gender_criterion_group',
@@ -676,7 +690,7 @@ class ClinicalTrialMatchingAgent:
                     'is_gender_group': True
                 })
         
-        # Check exclusion criteria (no special handling needed - patient must have NONE)
+        # Check exclusion criteria
         exclusion_violated = []
         exclusion_satisfied = []
         
@@ -684,7 +698,7 @@ class ClinicalTrialMatchingAgent:
             normalized_criterion = self.normalize_variable_name(criterion)
             
             if normalized_criterion in patient_variables:
-                # Patient HAS the excluded condition --> violation
+                # Patient has the excluded condition
                 criterion_details = patient_details.get(normalized_criterion, [])
                 exclusion_violated.append({
                     'criterion': criterion,
@@ -702,7 +716,7 @@ class ClinicalTrialMatchingAgent:
                     'readable_name': self.format_criterion_name(criterion, None)
                 })
         
-        # Determine eligibility: must meet ALL inclusions (with OR for gender) AND NO exclusions
+        # Determine eligibility: must meet all inclusions and no exclusions
         all_inclusions_met = len(inclusion_missing) == 0
         no_exclusions_violated = len(exclusion_violated) == 0
         is_eligible = all_inclusions_met and no_exclusions_violated
@@ -732,7 +746,9 @@ class ClinicalTrialMatchingAgent:
         return reasoning
     
     def analyze_all_trials(self, patient_id: str) -> List[Dict]:
-        """Analyze patient against all trials and return with eligibility reasoning."""
+        """
+        Analyze patient against all trials and return with eligibility reasoning.
+        """
         patient_profile = self.load_patient_profile(patient_id)
         if not patient_profile:
             return []
@@ -751,11 +767,13 @@ class ClinicalTrialMatchingAgent:
         return all_trials
     
     def generate_patient_intro(self, patient_profile: Dict) -> str:
-        """Generate a first-person introduction from the patient profile - only what patient would naturally disclose."""
+        """
+        Generate a first-person introduction from the patient profile - only what patient would naturally disclose.
+        """
         patient_note = patient_profile.get('patient_note', {})
         note_text = patient_note.get('text', '')
         
-        # Use LLM to convert to first person - focusing on presenting complaint/symptoms only
+        # LLM to convert to first person, focusing on presenting complaint/symptoms only
         prompt = f"""Convert the following medical note into a brief, natural first-person introduction for a patient seeking clinical trial matches.
 
 IMPORTANT CONTEXT: The patient ({self.current_patient_name}) is talking to an AI assistant that helps match patients with clinical trials. They are NOT talking to a doctor or healthcare provider.
@@ -776,7 +794,9 @@ First-Person Introduction:"""
         return response.content
     
     def ask_for_additional_info(self, patient_profile: Dict, initial_intro: str) -> str:
-        """Generate agent's request for additional information not disclosed in intro."""
+        """
+        Generate agent's request for additional information not disclosed in intro.
+        """
         patient_note = patient_profile.get('patient_note', {})
         note_text = patient_note.get('text', '')
         
@@ -801,7 +821,9 @@ Agent's Request:"""
         return response.content
     
     def generate_complete_patient_response(self, patient_profile: Dict) -> str:
-        """Generate patient's complete response with all missing information."""
+        """
+        Generate patient's complete response with all missing information.
+        """
         patient_note = patient_profile.get('patient_note', {})
         note_text = patient_note.get('text', '')
         
@@ -856,7 +878,6 @@ Patient's Response:"""
             trial_interventions = trial_info.get('interventions', [])
             interventions.update(trial_interventions)
         
-        # Build context for LLM
         context = f"""
 Available trial characteristics:
 - Phases: {', '.join(sorted(phases)) if phases else 'Not specified'}
@@ -918,156 +939,6 @@ Your question:"""
             'question': response.content,
             'is_final': question_number >= 3
         }
-    
-    def narrow_trials_by_preferences(self, eligible_trials: List[Dict], preference_qa: List[Dict]) -> Dict:
-        """Use LLM to narrow down trials based on collected Q&A preferences."""
-        # Build trial summaries
-        trial_summaries = []
-        for i, trial_data in enumerate(eligible_trials):
-            trial = trial_data.get('trial', {})
-            trial_info = trial.get('trial_info', {})
-            
-            summary = f"""
-Trial {i+1}: {trial_info.get('title', 'Unknown')}
-- Trial ID: {trial_info.get('trial_id', 'N/A')}
-- Phase: {trial_info.get('phase', 'Not listed')}
-- Focus Areas: {', '.join(trial_info.get('diseases', ['Not specified']))}
-- Brief Summary: {trial_info.get('brief_summary', 'N/A')[:300]}...
-- Interventions: {', '.join(trial_info.get('interventions', ['Not specified'])[:3])}
-"""
-            trial_summaries.append(summary)
-        
-        trials_text = "\n".join(trial_summaries)
-        
-        # Build preference context from Q&A
-        preferences_text = "Patient's Preferences (from conversation):\n"
-        for i, qa in enumerate(preference_qa, 1):
-            preferences_text += f"\nQ{i}: {qa['question']}\nA{i}: {qa['answer']}\n"
-        
-        prompt = f"""Based on the patient's stated preferences from our conversation and the available clinical trials, recommend the BEST trial match.
-
-{preferences_text}
-
-Available Trials:
-{trials_text}
-
-Analyze which trial best matches ALL of the patient's stated preferences. Consider:
-- Phase preferences (early vs. late)
-- Treatment approach preferences
-- What they said matters most (safety, innovation, convenience, etc.)
-- How well each trial aligns with their complete set of preferences
-
-Respond in JSON format:
-{{
-    "recommended_trial_index": <0-based index of best trial>,
-    "reasoning": "<detailed explanation connecting their specific preferences to why this trial is the best match - reference their actual answers>"
-}}
-
-Your response (JSON only):"""
-        
-        response = self.llm.invoke([HumanMessage(content=prompt)])
-        
-        # Parse JSON response
-        try:
-            # Clean up response text
-            response_text = response.content.strip()
-            # Remove markdown code blocks if present
-            response_text = response_text.replace('```json', '').replace('```', '').strip()
-            recommendation = json.loads(response_text)
-            
-            trial_index = recommendation.get('recommended_trial_index', 0)
-            reasoning = recommendation.get('reasoning', '')
-            
-            return {
-                'trial': eligible_trials[trial_index],
-                'reasoning': reasoning
-            }
-        except (json.JSONDecodeError, KeyError, IndexError) as e:
-            # Fallback to first trial if parsing fails
-            return {
-                'trial': eligible_trials[0],
-                'reasoning': 'Based on your preferences, this trial appears to be a good match for you.'
-            }
-    
-    def generate_trial_recommendation_message(self, recommended_trial: Dict, reasoning: str) -> str:
-        """
-        DEPRECATED: Use generate_flexible_recommendation_message instead.
-        This method kept for backward compatibility.
-        """
-        # Redirect to new flexible message format
-        recommendation_data = {
-            'trial': recommended_trial,
-            'reasoning': reasoning,
-            'sql_scores': getattr(self, 'recommended_trial_profile', {}).get('sql_scores', []),
-            'all_eligible_trials': getattr(self, 'recommended_trial_profile', {}).get('all_eligible_trials', [])
-        }
-        return self.generate_flexible_recommendation_message(recommendation_data)
-    
-    def detect_conversation_end(self, user_message: str) -> bool:
-        """Detect if user is satisfied and ready to end the conversation."""
-        lower_msg = user_message.lower()
-        
-        # Positive/satisfied phrases
-        satisfied_phrases = [
-            "no", "nope", "no thanks", "i'm good", "im good", "all good",
-            "that's all", "thats all", "that's it", "thats it", 
-            "perfect", "sounds good", "looks good", "this is great", "that's great", "thats great",
-            "i'm satisfied", "im satisfied", "i'm all set", "im all set", "all set"
-        ]
-        
-        # Thank you indicators (strong signal of satisfaction)
-        gratitude_phrases = ["thank you", "thanks", "appreciate it", "appreciate this"]
-        
-        # Negative indicators (user is NOT satisfied)
-        dissatisfaction_phrases = [
-            "not sure", "don't think", "dont think", "other options", "different trial",
-            "not right", "not interested", "tell me more", "what about", "can you explain"
-        ]
-        
-        # First check for dissatisfaction - if found, definitely not ending
-        for phrase in dissatisfaction_phrases:
-            if phrase in lower_msg:
-                return False
-        
-        # Check for gratitude (strong signal even in longer messages)
-        has_gratitude = any(phrase in lower_msg for phrase in gratitude_phrases)
-        
-        # Check for satisfied phrases
-        has_satisfaction = any(phrase in lower_msg for phrase in satisfied_phrases)
-        
-        # If message has gratitude AND satisfaction, likely ending
-        if has_gratitude and has_satisfaction:
-            return True
-        
-        # If message is short (≤10 words) and has either gratitude OR clear satisfaction
-        if len(user_message.split()) <= 10:
-            if has_gratitude or has_satisfaction:
-                return True
-        
-        return False
-    
-    def generate_outro_message(self) -> str:
-        """Generate closing message with disclaimer."""
-        message = """Thank you so much for using Trialogue! I hope you had a positive experience exploring your clinical trial options.
-
-**Important Disclaimer:** Trialogue is designed to help you discover potential clinical trial matches, but it is **not a substitute for professional medical advice**. Please consult with your healthcare provider before making any medical decisions, including enrollment in clinical trials. Your doctor can provide personalized guidance based on your complete medical history and current health status.
-
-I wish you the very best on your health journey. Take care!"""
-        
-        return message
-    
-    def continue_trial_narrowing(self, eligible_trials: List[Dict], user_feedback: str) -> str:
-        """Generate follow-up questions to further narrow down trials."""
-        prompt = f"""The patient was not satisfied with the recommended trial. Their feedback: "{user_feedback}"
-
-Based on their feedback and the {len(eligible_trials)} eligible trials, generate 1-2 follow-up questions to better understand what they're looking for. 
-
-Be empathetic and acknowledge their concerns. Ask about specific aspects that might help narrow down the options further.
-
-Follow-up questions:"""
-        
-        response = self.llm.invoke([HumanMessage(content=prompt)])
-        return response.content
     
     def context_aware_chat(self, user_message: str, conversation_context: Dict) -> str:
         """
@@ -1209,7 +1080,9 @@ Your response:"""
         return response.content
     
     def extract_key_patient_info(self, patient_profile: Dict) -> str:
-        """Extract key patient information for confirmation."""
+        """
+        Extract key patient information for confirmation.
+        """
         patient_note = patient_profile.get('patient_note', {})
         note_text = patient_note.get('text', '')
         
@@ -1260,7 +1133,9 @@ Key Details (in bullet points):"""
                 return f"You don't have {article} {readable_name}"
     
     def generate_detailed_eligibility_explanation(self, reasoning: Dict) -> str:
-        """Generate detailed, empathetic explanation of eligibility with specific reasons."""
+        """
+        Generate detailed and empathetic explanation of eligibility with specific reasons.
+        """
         inclusion = reasoning.get('inclusion_criteria', {})
         exclusion = reasoning.get('exclusion_criteria', {})
         eligible = reasoning.get('eligible', False)
@@ -1352,7 +1227,9 @@ Key Details (in bullet points):"""
             return "\n".join(explanation_parts)
     
     def generate_trial_explanation(self, trial_data: Dict, reasoning: Dict) -> str:
-        """Generate a natural language explanation of eligibility for a trial."""
+        """
+        Generate a natural language explanation of eligibility for a trial.
+        """
         trial_info = trial_data['trial'].get('trial_info', {})
         title = trial_info.get('title', 'Unknown Title')
         brief_summary = trial_info.get('brief_summary', 'No summary available')[:150] + "..."
@@ -1369,278 +1246,3 @@ Key Details (in bullet points):"""
 **Status: {status}**
 
 {detailed_explanation}"""
-    
-    def select_patient(self) -> str:
-        """Allow user to select a patient profile."""
-        print("=" * 60)
-        print("CLINICAL TRIAL MATCHING SYSTEM")
-        print("=" * 60)
-        print("\nAvailable Patient Profiles:")
-        
-        # List available profiles
-        profiles = sorted(self.patient_profiles_dir.glob('*.json'))
-        
-        if not profiles:
-            return "No patient profiles found."
-        
-        # Gender-neutral diverse names
-        patient_names = [
-            "Alex Rivera",
-            "Jordan Chen",
-            "Taylor Patel",
-            "Casey Johnson",
-            "Morgan Kim",
-            "Riley Thompson",
-            "Avery Washington",
-            "Quinn Martinez"
-        ]
-        
-        for i, profile_path in enumerate(profiles, 1):
-            patient_id = profile_path.stem
-            # Use name from list, or generate generic if we run out
-            name = patient_names[i-1] if i <= len(patient_names) else f"Patient {i}"
-            print(f"{i}. {name} (ID: {patient_id})")
-        
-        while True:
-            try:
-                choice = input(f"\nSelect a patient (1-{len(profiles)}): ").strip()
-                choice_num = int(choice)
-                
-                if 1 <= choice_num <= len(profiles):
-                    selected_profile = profiles[choice_num - 1]
-                    patient_id = f"sigir-{selected_profile.stem}"
-                    self.current_patient_id = patient_id
-                    self.current_patient_profile = self.load_patient_profile(patient_id)
-                    
-                    # Store selected name for later use
-                    self.current_patient_name = patient_names[choice_num-1] if choice_num <= len(patient_names) else f"Patient {choice_num}"
-                    return patient_id
-                else:
-                    print(f"Please enter a number between 1 and {len(profiles)}")
-            except ValueError:
-                print("Please enter a valid number")
-            except KeyboardInterrupt:
-                return None
-    
-    def run_conversation(self):
-        """Run the main conversation loop."""
-        # Select patient
-        patient_id = self.select_patient()
-        
-        if not patient_id or not self.current_patient_profile:
-            print("Could not load patient profile. Exiting.")
-            return
-        
-        print("\n" + "=" * 60)
-        print("STARTING CONSULTATION")
-        print("=" * 60)
-        
-        # Generate patient introduction (name is already set in select_patient)
-        patient_intro = self.generate_patient_intro(self.current_patient_profile)
-        
-        # Initial agent message - more empathetic
-        agent_greeting = """Hi! I'm here to help you explore clinical trial options that might be right for you. 
-
-I know navigating clinical trials can feel overwhelming, but I'm here to make this process easier. Please share a bit about yourself - your medical history, current health conditions, and any concerns you have."""
-        
-        print(f"\nAgent: {agent_greeting}\n")
-        print(f"Patient: {patient_intro}\n")
-        
-        # Extract and confirm key information - more empathetic tone
-        print("Agent: Thank you so much for sharing that with me. Let me make sure I've understood your information correctly:\n")
-        
-        key_info = self.extract_key_patient_info(self.current_patient_profile)
-        print(key_info)
-        print("\nDoes this look accurate to you? (yes/no): ", end="")
-        
-        confirmation = input().strip().lower()
-        
-        if confirmation not in ['yes', 'y']:
-            print("\nAgent: No worries at all! Let's clarify what needs to be corrected. What should I update?")
-            return
-        
-        print("\nAgent: Perfect! I have information on 10 clinical trials that we can review together. I'll go through each one with you and explain whether you're eligible and why. This will help us find the best option for your situation.\n")
-        print("=" * 60)
-        
-        # Analyze all trials
-        self.all_trials_with_reasoning = self.analyze_all_trials(patient_id)
-        
-        # Go through each trial
-        for i, trial_data in enumerate(self.all_trials_with_reasoning, 1):
-            print(f"\n**TRIAL {i} of {len(self.all_trials_with_reasoning)}**")
-            print("-" * 60)
-            
-            explanation = self.generate_trial_explanation(trial_data, trial_data['reasoning'])
-            print(explanation)
-            
-            print()
-            input("Press Enter to continue to the next trial...")
-        
-        # Count eligible trials
-        eligible_trials = [t for t in self.all_trials_with_reasoning if t['eligible']]
-        self.eligible_trials = eligible_trials
-        
-        print("\n" + "=" * 60)
-        print("ELIGIBILITY SUMMARY")
-        print("=" * 60)
-        
-        if not eligible_trials:
-            print("\nAgent: I understand this might be disappointing, but based on our review, you don't currently meet the eligibility criteria for any of these 10 trials.")
-            print("\nThis doesn't mean there aren't other options out there for you. Here's what I recommend:")
-            print("  • Talk with your healthcare provider about other clinical trial opportunities")
-            print("  • Check ClinicalTrials.gov regularly for new studies")
-            print("  • Remember that eligibility can change as your situation evolves or new trials open")
-            print("\nYour health journey is unique, and the right trial may still be out there.")
-        elif len(eligible_trials) == 1:
-            # Special handling for exactly one eligible trial
-            trial_info = eligible_trials[0]['trial'].get('trial_info', {})
-            title = trial_info.get('title', 'Unknown Title')
-            trial_id = trial_info.get('trial_id', 'N/A')
-            
-            print(f"\nAgent: Good news! You're eligible for one clinical trial:\n")
-            print(f"  • {title} (ID: {trial_id})\n")
-            print("=" * 60)
-            
-            # Interactive questions for the single trial
-            self.interactive_single_trial_discussion()
-        else:
-            print(f"\nAgent: Great news! Based on our review, you're eligible for {len(eligible_trials)} trials:\n")
-            
-            for i, trial_data in enumerate(eligible_trials, 1):
-                trial_info = trial_data['trial'].get('trial_info', {})
-                title = trial_info.get('title', 'Unknown Title')
-                trial_id = trial_info.get('trial_id', 'N/A')
-                print(f"{i}. {title} (ID: {trial_id})")
-            
-            print("\n" + "=" * 60)
-            print("Now let's find the best trial for you!")
-            print("=" * 60)
-            
-            # Interactive selection
-            self.interactive_trial_selection()
-    
-    def interactive_single_trial_discussion(self):
-        """Handle conversation when patient is eligible for exactly one trial."""
-        trial_data = self.eligible_trials[0]
-        trial_info = trial_data['trial'].get('trial_info', {})
-        
-        print("\nAgent: Since this is the only trial you're eligible for, I'd like to help you learn more about it.")
-        print("What specific information would you like to know? For example:")
-        print("  • Location and schedule details")
-        print("  • What the trial involves (procedures, treatments)")
-        print("  • Duration and time commitment")
-        print("  • Potential benefits and risks")
-        print("  • Contact information for enrollment")
-        print("\nFeel free to ask me anything, or type 'done' when you're ready to move forward, or 'exit' to end.\n")
-        
-        while True:
-            user_input = input("You: ").strip()
-            
-            if not user_input:
-                continue
-                
-            if user_input.lower() in ['exit', 'quit', 'bye']:
-                print("\nAgent: I appreciate you taking the time to explore this trial with me. Whatever you decide, I wish you the very best on your health journey. Take care!\n")
-                break
-            
-            if user_input.lower() == 'done':
-                print("\nAgent: Wonderful! I think this trial could be a great fit for you. I recommend reaching out to the trial coordinator to discuss the next steps in the enrollment process.")
-                print("They'll be able to answer any additional questions and guide you through what comes next.")
-                print("\nThank you for letting me help you today. Best of luck with your treatment journey!\n")
-                break
-            
-            # Generate response about the single trial
-            trial_context = json.dumps(trial_info, indent=2)
-            
-            prompt = f"""You are a compassionate clinical trial matching agent helping a patient learn about the ONE trial they're eligible for.
-
-Trial information:
-{trial_context}
-
-Patient's question: {user_input}
-
-Provide a warm, helpful, and informative response. Be empathetic and encouraging. If the information isn't available in the trial data, acknowledge that and suggest they ask the trial coordinator directly. Keep your response focused and conversational."""
-            
-            response = self.llm.invoke([HumanMessage(content=prompt)])
-            print(f"\nAgent: {response.content}\n")
-    
-    def interactive_trial_selection(self):
-        """Help user select the best trial through conversation."""
-        print("\nAgent: I'd love to help you find the trial that best fits your needs and circumstances.")
-        print("Please feel free to ask me questions about any of these trials, or let me know what matters most to you")
-        print("(for example: trial phase, specific treatments, time commitment, etc.)\n")
-        print("Type 'done' when you've made your decision, or 'exit' if you'd like to end our consultation.\n")
-        
-        while True:
-            user_input = input("You: ").strip()
-            
-            if not user_input:
-                continue
-                
-            if user_input.lower() in ['exit', 'quit', 'bye']:
-                print("\nAgent: Thank you so much for allowing me to assist you today. I wish you all the best with your health journey. Take care!\n")
-                break
-            
-            if user_input.lower() == 'done':
-                print("\nAgent: Have you decided which trial interests you most?")
-                final_choice = input("You: ").strip()
-                
-                if final_choice:
-                    print(f"\nAgent: That's a wonderful choice! I recommend reaching out to the trial coordinator for '{final_choice}' to learn more about the enrollment process.")
-                    print("They'll be able to answer any specific questions and help you understand what the next steps would be.")
-                    print("\nThank you for trusting me to help you find the right trial. I wish you the very best on this journey!\n")
-                break
-            
-            # Generate response based on eligible trials
-            trials_context = json.dumps([t['trial']['trial_info'] for t in self.eligible_trials], indent=2)
-            
-            prompt = f"""You are a compassionate and knowledgeable clinical trial matching agent helping a patient choose between eligible trials.
-
-Eligible trials:
-{trials_context}
-
-Patient's question/comment: {user_input}
-
-Provide a warm, empathetic response that helps them make an informed decision. If they're asking about specific aspects 
-(location, phase, treatment type, etc.), compare the trials thoughtfully on those dimensions. If they express preferences, 
-recommend the trial(s) that best align with their needs, explaining your reasoning clearly.
-
-Keep your response conversational, supportive, and focused on their wellbeing. Show genuine care for their situation."""
-            
-            response = self.llm.invoke([HumanMessage(content=prompt)])
-            print(f"\nAgent: {response.content}\n")
-
-
-def main():
-    """Main entry point."""
-    # Set up paths
-    PATIENT_PROFILES_DIR = "patient_profiles"
-    TRIAL_PROFILES_DIR = "trial_profiles"
-    
-    # Get OpenAI API key from environment
-    openai_api_key = os.getenv("OPENAI_API_KEY")
-    
-    if not openai_api_key:
-        print("Error: OPENAI_API_KEY environment variable not set.")
-        print("\nPlease set it with:")
-        print("  export OPENAI_API_KEY='your-api-key'  (Mac/Linux)")
-        print("  set OPENAI_API_KEY=your-api-key       (Windows CMD)")
-        print("\nOr create a .env file with:")
-        print("  OPENAI_API_KEY=your-api-key")
-        return
-    
-    print(f"✓ OpenAI API key found: {openai_api_key[:8]}...{openai_api_key[-4:]}\n")
-    
-    # Create agent
-    agent = ClinicalTrialMatchingAgent(
-        patient_profiles_dir=PATIENT_PROFILES_DIR,
-        trial_profiles_dir=TRIAL_PROFILES_DIR,
-        openai_api_key=openai_api_key
-    )
-    
-    # Run conversation
-    agent.run_conversation()
-
-
-if __name__ == "__main__":
-    main()
