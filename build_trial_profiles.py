@@ -2,6 +2,16 @@ import json
 import os
 from pathlib import Path
 
+
+"""
+This script was used to extract and standardize clinical trial data from the original 
+dataset into uniform JSON format. It processes trial corpus data and eligibility 
+criteria to create structured profiles stored in trial_profiles/. This script has 
+already been run and does not need to be executed again unless reprocessing the 
+original dataset.
+"""
+
+
 def extract_trial_profiles(base_path):
     """
     Extracts trial profiles from rank folders for each patient.

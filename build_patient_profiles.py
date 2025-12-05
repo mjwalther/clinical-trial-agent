@@ -3,6 +3,16 @@ import os
 from pathlib import Path
 from collections import defaultdict
 
+
+"""
+This script was used to extract and standardize patient profiles from the original 
+dataset into uniform JSON format. It processes canonical.jsonl files and patient 
+notes to create structured profiles stored in patient_profiles/. This script has 
+already been run and does not need to be executed again unless reprocessing the 
+original dataset.
+"""
+
+
 def extract_patient_profiles(base_path):
     """
     Extract patient profiles from canonical.jsonl files in the dataset.
