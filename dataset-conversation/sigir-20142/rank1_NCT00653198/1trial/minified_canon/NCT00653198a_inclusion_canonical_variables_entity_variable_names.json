@@ -1,9 +1,0 @@
-[
-  "patient_sex_is_male_now",
-  "patient_sex_is_female_now",
-  "patient_has_finding_of_gastroenteritis_inthehistory",
-  "patient_has_undergone_enzyme_linked_immunosorbent_assay_now",
-  "patient_has_undergone_identification_of_rotavirus_antigen_in_feces_now_outcome_is_positive",
-  "patient_has_undergone_enzyme_linked_immunosorbent_assay_inthehistory",
-  "patient_has_undergone_identification_of_rotavirus_antigen_in_feces_inthehistory_outcome_is_positive"
-]

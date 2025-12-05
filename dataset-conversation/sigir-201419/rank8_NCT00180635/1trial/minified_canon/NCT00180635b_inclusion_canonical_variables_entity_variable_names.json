@@ -1,7 +1,0 @@
-[
-  "patient_has_finding_of_smoker_now",
-  "patient_has_symptoms_of_cough_now",
-  "patient_has_undergone_spirometry_now_outcome_is_normal",
-  "patient_has_symptoms_of_sputum_now",
-  "patient_forced_expired_volume_in_1_second_reversibility_value_recorded_now_withunit_percent"
-]

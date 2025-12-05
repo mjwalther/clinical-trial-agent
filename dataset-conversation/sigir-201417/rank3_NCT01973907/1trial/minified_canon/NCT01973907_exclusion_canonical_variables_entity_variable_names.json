@@ -1,8 +1,0 @@
-[
-  "patient_is_undergoing_resuscitation_now",
-  "patient_can_undergo_resuscitation_now",
-  "patient_has_finding_of_anaphylactic_shock_now",
-  "patient_has_finding_of_cardiogenic_shock_now",
-  "patient_has_finding_of_hemorrhagic_shock_now",
-  "patient_has_finding_of_shock_now"
-]

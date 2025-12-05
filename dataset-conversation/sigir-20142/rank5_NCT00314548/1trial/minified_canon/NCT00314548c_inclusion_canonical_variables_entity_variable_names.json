@@ -1,9 +1,0 @@
-[
-  "patient_has_finding_of_acute_respiratory_distress_syndrome_now",
-  "patient_has_finding_of_heart_failure_now",
-  "patient_has_finding_of_hypoxemia_now",
-  "patient_inspired_oxygen_concentration_value_recorded_now_withunit_fraction",
-  "patient_oxygen_measurement_partial_pressure_arterial_value_recorded_now_withunit_millimeters_of_mercury",
-  "patient_has_undergone_plain_chest_x_ray_now",
-  "patient_pulmonary_artery_wedge_pressure_value_recorded_now_withunit_millimeters_of_mercury"
-]
