@@ -2,19 +2,12 @@ from flask import Flask, request, jsonify, send_file
 import os
 from agent import ClinicalTrialMatchingAgent
 import time
-from pathlib import Path
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-# Load environment variables from .env file if it exists
-env_path = Path('.env')
-if env_path.exists():
-    with open(env_path) as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#') and '=' in line:
-                key, value = line.split('=', 1)
-                os.environ[key.strip()] = value.strip()
+# Load environment variables from .env file
+load_dotenv()
 
 PATIENT_PROFILES_DIR = "patient_profiles"
 TRIAL_PROFILES_DIR = "trial_profiles"
@@ -40,7 +33,6 @@ agent = ClinicalTrialMatchingAgent(
     openai_api_key=openai_api_key
 )
 
-# Patient names mapping
 PATIENT_NAMES = {
     'sigir-20141': 'Alex Rivera',
     'sigir-20142': 'Jordan Chen',
@@ -54,7 +46,6 @@ PATIENT_NAMES = {
 
 @app.route('/')
 def index():
-    """Serve the main HTML file"""
     import os
     cwd = os.getcwd()
     print(f"Current directory: {cwd}")
@@ -70,13 +61,11 @@ def index():
 
 @app.route('/start', methods=['POST'])
 def start_conversation():
-    """Start conversation with selected patient"""
     data = request.json
     patient_id = data['patient_id']
     
     print(f"Loading patient: {patient_id}")
     
-    # Load patient using your existing agent
     agent.current_patient_id = patient_id
     agent.current_patient_profile = agent.load_patient_profile(patient_id)
     
@@ -86,7 +75,6 @@ def start_conversation():
     
     agent.current_patient_name = PATIENT_NAMES.get(patient_id, 'Patient')
     
-    # Return greeting immediately
     agent_greeting = "Hi! I'm here to help you explore clinical trial options that might be right for you. I know navigating clinical trials can feel overwhelming, but I'm here to make this process easier."
     
     return jsonify({
@@ -95,7 +83,6 @@ def start_conversation():
 
 @app.route('/generate-intro', methods=['POST'])
 def generate_intro():
-    """Generate patient intro and ask for additional info"""
     patient_intro = agent.generate_patient_intro(agent.current_patient_profile)
     agent_ask = agent.ask_for_additional_info(agent.current_patient_profile, patient_intro)
     patient_complete = agent.generate_complete_patient_response(agent.current_patient_profile)
@@ -111,14 +98,11 @@ def generate_intro():
 
 @app.route('/analyze', methods=['POST'])
 def analyze_trials():
-    """Analyze all trials using ORIGINAL rule-based logic (NO SQL HERE)"""
     data = request.json
     patient_id = data['patient_id']
     
-    # Use ORIGINAL analyze_all_trials method (rule-based logic)
     all_trials = agent.analyze_all_trials(patient_id)
     
-    # Format trials with explanations
     formatted_trials = []
     for trial_data in all_trials:
         trial = trial_data['trial']
@@ -140,7 +124,6 @@ def analyze_trials():
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    """Handle chat messages"""
     data = request.json
     message = data.get('message', '')
     conversation_context = data.get('context', {})
@@ -149,7 +132,6 @@ def chat():
 
 @app.route('/get-preference-questions', methods=['POST'])
 def get_preference_questions():
-    """Generate preference questions"""
     data = request.json
     eligible_trials = data.get('eligible_trials', [])
     question_number = data.get('question_number', 1)
@@ -163,43 +145,34 @@ def get_preference_questions():
 
 @app.route('/narrow-trials', methods=['POST'])
 def narrow_trials():
-    """
-    Narrow down trials using SQL-based preference matching!
-    Returns SQL scores and all eligible trials for discussion.
-    """
     data = request.json
     eligible_trials = data.get('eligible_trials', [])
     preference_qa = data.get('preference_qa', [])
     
-    # Generate unique session ID based on patient and timestamp
     session_id = f"{agent.current_patient_id}_{int(time.time())}"
     
-    # ========================================================
-    # USE SQL FOR PREFERENCE MATCHING
-    # ========================================================
     recommendation = agent.narrow_trials_by_preferences_sql(
         eligible_trials, 
         preference_qa,
         session_id
     )
     
-    # Use the new flexible message generator
     message = agent.generate_flexible_recommendation_message(recommendation)
     
     return jsonify({
         'recommended_trial': recommendation['trial'],
         'message': message,
-        'sql_scores': recommendation.get('sql_scores', []),  # Include SQL scores
-        'all_eligible_trials': recommendation.get('all_eligible_trials', []),  # Include all eligible
-        'conversation_ended': True  # Signal that conversation should end
+        'sql_scores': recommendation.get('sql_scores', []),
+        'all_eligible_trials': recommendation.get('all_eligible_trials', []),
+        'conversation_ended': True
     })
 
 if __name__ == '__main__':
     print("=" * 70)
     print("Starting Trialogue Server")
     print("=" * 70)
-    print("✓ Eligibility Matching: Rule-based Boolean logic (original)")
-    print("✓ Preference Matching: SQL-powered queries (NEW!)")
+    print("✓ Eligibility Matching: Rule-based Boolean logic")
+    print("✓ Preference Matching: SQL-powered queries")
     print(f"✓ Preference Database: trialogue_preferences.db")
     print(f"✓ Patient profiles: {PATIENT_PROFILES_DIR}")
     print(f"✓ Trial profiles: {TRIAL_PROFILES_DIR}")
