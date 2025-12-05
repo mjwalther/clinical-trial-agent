@@ -105,8 +105,6 @@ Open your web browser and navigate to:
 http://127.0.0.1:5000
 ```
 
-```
-
 ## Usage
 
 1. **Select a Patient**: Choose from the available sample patient profiles
@@ -115,9 +113,6 @@ http://127.0.0.1:5000
 4. **Trial Review**: Review all 10 trials with eligibility explanations
 5. **Preference Questions**: Answer questions about your preferences (if multiple trials are eligible)
 6. **Final Recommendation**: Receive a personalized trial recommendation with ClinicalTrials.gov link
-
-
-```
 
 ## Technical Details
 
