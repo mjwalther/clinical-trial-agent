@@ -88,11 +88,11 @@ You should see output like:
 ======================================================================
 Starting Trialogue Server
 ======================================================================
-✓ Eligibility Matching: Rule-based Boolean logic
-✓ Preference Matching: SQL-powered queries
-✓ Preference Database: trialogue_preferences.db
-✓ Patient profiles: patient_profiles
-✓ Trial profiles: trial_profiles
+ Eligibility Matching: Rule-based Boolean logic
+ Preference Matching: SQL-powered queries
+ Preference Database: trialogue_preferences.db
+ Patient profiles: patient_profiles
+ Trial profiles: trial_profiles
 ======================================================================
  * Running on http://127.0.0.1:5000
 ```
