@@ -18,7 +18,7 @@ Trialogue is a conversational AI agent that helps patients find clinical trials 
 
 ## Installation
 
-### 1. Clone or Download the Repository
+### 1. Clone or Download the Repository (SKIP IF DOWNLOADED AS ZIP FILE)
 
 ```bash
 git clone https://github.com/mjwalther/clinical-trial-agent
@@ -44,7 +44,7 @@ pip install flask flask-cors langchain-openai langchain-core openai
 Create a `.env` file in the project root directory:
 
 ```bash
-# Copy the example file
+# You can copy the example file
 cp .env.example .env
 ```
 
@@ -74,28 +74,6 @@ set OPENAI_API_KEY=your-api-key-here
 $env:OPENAI_API_KEY='your-api-key-here'
 ```
 
-### 4. Verify Directory Structure
-
-Ensure your project has the following structure:
-
-```
-trial-matching-agent/
-├── server.py
-├── agent.py
-├── index.html
-├── requirements.txt
-├── .env
-├── patient_profiles/
-│   ├── 20141.json
-│   ├── 20142.json
-│   └── ...
-└── trial_profiles/
-    ├── sigir-20141/
-    │   ├── trial1.json
-    │   └── trial2.json
-    └── ...
-```
-
 ## Running the Application
 
 ### Start the Server
@@ -110,8 +88,8 @@ You should see output like:
 ======================================================================
 Starting Trialogue Server
 ======================================================================
-✓ Eligibility Matching: Rule-based Boolean logic (original)
-✓ Preference Matching: SQL-powered queries (NEW!)
+✓ Eligibility Matching: Rule-based Boolean logic
+✓ Preference Matching: SQL-powered queries
 ✓ Preference Database: trialogue_preferences.db
 ✓ Patient profiles: patient_profiles
 ✓ Trial profiles: trial_profiles
