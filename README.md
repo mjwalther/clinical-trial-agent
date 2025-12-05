@@ -12,7 +12,7 @@ Trialogue is a conversational AI agent that helps patients find clinical trials 
 ## Prerequisites
 
 - **Python 3.8 or higher**
-- **OpenAI API Key** (sign up at [platform.openai.com](https://platform.openai.com/api-keys))
+- **OpenAI API Key** ([platform.openai.com](https://platform.openai.com/api-keys))
 - Patient profile data in `patient_profiles/` directory
 - Trial profile data in `trial_profiles/` directory
 
@@ -21,8 +21,8 @@ Trialogue is a conversational AI agent that helps patients find clinical trials 
 ### 1. Clone or Download the Repository
 
 ```bash
-git clone <your-repo-url>
-cd trialogue
+git clone https://github.com/mjwalther/clinical-trial-agent
+cd trial-matching-agent
 ```
 
 ### 2. Install Dependencies
@@ -48,7 +48,7 @@ Create a `.env` file in the project root directory:
 cp .env.example .env
 ```
 
-Then edit `.env` and add your OpenAI API key:
+Edit `.env` and add your OpenAI API key:
 
 ```
 OPENAI_API_KEY=your-api-key-here
@@ -79,7 +79,7 @@ $env:OPENAI_API_KEY='your-api-key-here'
 Ensure your project has the following structure:
 
 ```
-trialogue/
+trial-matching-agent/
 ├── server.py
 ├── agent.py
 ├── index.html
@@ -127,47 +127,18 @@ Open your web browser and navigate to:
 http://127.0.0.1:5000
 ```
 
-or
-
-```
-http://localhost:5000
 ```
 
 ## Usage
 
-1. **Select a Patient**: Choose from the available patient profiles
+1. **Select a Patient**: Choose from the available sample patient profiles
 2. **Patient Introduction**: The system generates a natural patient introduction
 3. **Information Confirmation**: Verify the extracted patient information
 4. **Trial Review**: Review all 10 trials with eligibility explanations
-5. **Preference Questions**: Answer 3 questions about your preferences (if multiple trials are eligible)
+5. **Preference Questions**: Answer questions about your preferences (if multiple trials are eligible)
 6. **Final Recommendation**: Receive a personalized trial recommendation with ClinicalTrials.gov link
 
-## Troubleshooting
 
-### "OpenAI API key not set" Error
-
-Make sure you've either:
-
-- Created a `.env` file with your API key, OR
-- Set the `OPENAI_API_KEY` environment variable
-
-### "Could not load patient profile" Error
-
-Verify that:
-
-- The `patient_profiles/` directory exists
-- Patient JSON files are named correctly (e.g., `20141.json` for `sigir-20141`)
-
-### "index.html not found" Error
-
-Ensure `index.html` is in the same directory as `server.py`
-
-### Module Import Errors
-
-Reinstall dependencies:
-
-```bash
-pip install -r requirements.txt --force-reinstall
 ```
 
 ## Technical Details
@@ -192,8 +163,6 @@ pip install -r requirements.txt --force-reinstall
 - **High-Quality Input Performance**: 100% correctness, 7.6/10 quality
 - **Low-Quality Input Performance**: 62.5% correctness, 6.6/10 quality
 
-Tested across 8 patient profiles with user study (n=10) showing average ratings of 4.85/5 for overall experience.
-
 ## Dependencies
 
 See `requirements.txt` for complete list:
@@ -212,10 +181,7 @@ Thanks to:
 - Professor Monica Lam for CS 224V instruction
 - Arjun Jain for project mentorship
 
-## License
-
-[Add your license here]
-
 ## Contact
 
-[Add your contact information here]
+Matthias Jiro Walther (https://www.linkedin.com/in/jirowalther/)
+George Song (https://www.linkedin.com/in/georgedsong/)
